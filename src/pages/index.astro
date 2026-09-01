@@ -1,17 +1,223 @@
 ---
+import Base from '../layouts/Base.astro';
+import NavSoftkeys from '../components/NavSoftkeys.astro';
+import Panel from '../components/Panel.astro';
+import PanelHeader from '../components/PanelHeader.astro';
+import TickRule from '../components/TickRule.astro';
+import Softkey from '../components/Softkey.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import EntryRow from '../components/EntryRow.astro';
+import TagCloud from '../components/TagCloud.astro';
+import MetaTable from '../components/MetaTable.astro';
+import {
+  allLogs,
+  allProjects,
+  featuredProjects,
+  formatShort,
+  siteCounts,
+  tagIndex,
+} from '../lib/content';
+import type { MetaRow } from '../lib/types';
+import { site } from '../site';
 
+const [logs, projects, featured, counts, tags] = await Promise.all([
+  allLogs(),
+  allProjects(),
+  featuredProjects(),
+  siteCounts(),
+  tagIndex(),
+]);
+
+const recent = logs.slice(0, 6);
+const railTags = [...tags.entries()].slice(0, 5);
+const countFor = (slug: string) => logs.filter((e) => e.data.project === slug).length;
+
+const status: MetaRow[] = [
+  { label: 'LAST LOG', value: counts.lastLog ? formatShort(counts.lastLog) : '—' },
+  { label: 'BUILDING', value: site.building, tone: 'amber' },
+  { label: 'LOCATION', value: site.location },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base variant="hud" active="HUD" counts={counts}>
+  <NavSoftkeys active="HUD" />
+
+  <Panel bracket="full" size={13} tone="bright" ticks pad="46px 40px 40px" padSm="26px 18px">
+    <div class="hero">
+      <div class="hero-lead">
+        <p class="eyebrow">{site.domain.toUpperCase()}</p>
+        <h1 class="h1">{site.name}</h1>
+        <p class="intro">
+          Diagnostics software during the week, small useless web things on the weekend. This is
+          where the notes, the half-finished projects and twenty years of old websites all end up.
+        </p>
+        <div class="ctas">
+          <Softkey href="/logs" label="READ THE LOGS" variant="primary" size="lg" />
+          <Softkey href="/workshop" label="OPEN THE WORKSHOP" size="lg" />
+        </div>
+      </div>
+
+      <Panel pad="14px 16px">
+        <PanelHeader as="h2" label="STATUS" />
+        <MetaTable rows={status} />
+      </Panel>
+    </div>
+  </Panel>
+
+  <section aria-labelledby="featured-head">
+    <PanelHeader
+      as="h2"
+      variant="section"
+      label="FEATURED"
+      meta={`ALL ${counts.projects} PROJECTS ▸`}
+      metaHref="/workshop"
+      id="featured-head"
+    />
+    <div class="cards">
+      {
+        featured.map((project) => (
+          <ProjectCard project={project} entryCount={countFor(project.id)} />
+        ))
+      }
+    </div>
+  </section>
+
+  <TickRule />
+
+  <div class="split">
+    <Panel bracket="full" size={11} pad="0 0 4px" class="feed">
+      <PanelHeader
+        as="h2"
+        variant="inset"
+        label="RECENT ENTRIES"
+        meta={`ALL ${counts.logs} ▸`}
+        metaHref="/logs"
+      />
+      {recent.map((entry, i) => <EntryRow entry={entry} lit={i === 0} />)}
+    </Panel>
+
+    <div class="rail">
+      <Panel pad="14px 16px">
+        <PanelHeader as="h2" label="TAGS" />
+        <TagCloud tags={railTags} />
+      </Panel>
+
+      <div class="keys">
+        <Softkey href="/rss.xml" label="RSS" size="sm" block />
+        <Softkey href={site.github.url} label="GITHUB" size="sm" block external />
+        <Softkey href="/tags" label="TAGS" size="sm" block />
+        <Softkey href="/workshop#archive" label="ARCHIVE" size="sm" block />
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 210px;
+    gap: 48px;
+    align-items: start;
+    padding: 0 26px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-chrome);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--phos);
+  }
+
+  .h1 {
+    font-family: var(--font-chrome);
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1.32;
+    letter-spacing: 0.005em;
+    color: var(--text);
+    text-wrap: balance;
+    margin: 20px 0 18px;
+  }
+
+  .intro {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--text-body);
+    max-width: 560px;
+    text-wrap: pretty;
+    margin-bottom: 30px;
+  }
+
+  .ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 292px;
+    gap: 22px;
+    align-items: start;
+  }
+
+  /* The last feed row closes on the panel edge, not on a divider. */
+  .split :global(.feed > .row:last-child) {
+    border-bottom: 0;
+  }
+
+  .rail {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  @media (max-width: 1000px) {
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 26px;
+      padding: 0;
+    }
+
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .split {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .h1 {
+      font-size: 24px;
+      margin: 16px 0 14px;
+    }
+
+    .intro {
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .ctas {
+      gap: 8px;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+</style>

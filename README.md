@@ -1,43 +1,117 @@
-# Astro Starter Kit: Minimal
+# Uncommon Solid
 
-```sh
-pnpm create astro@latest -- --template minimal
+Personal site at [4167360.xyz](https://4167360.xyz). Astro 7, static build, Cloudflare Workers.
+
+## Commands
+
+| Command               | Action                         |
+| --------------------- | ------------------------------ |
+| `pnpm install`        | Install dependencies           |
+| `pnpm dev`            | Dev server at `localhost:4321` |
+| `pnpm build`          | Production build → `dist/`     |
+| `pnpm preview`        | Preview the production build   |
+| `npx wrangler deploy` | Deploy `dist/` to Cloudflare   |
+
+Node `>=22.12`. Package manager is pnpm.
+
+## Day-to-day updates
+
+Most edits are content or identity. You rarely need to touch layouts for a new post.
+
+### Site identity
+
+Edit [`src/site.ts`](src/site.ts) for:
+
+- name, domain, description
+- GitHub handle / URL, email
+- HUD status: `location`, `building`
+- colophon strings
+
+### New log post
+
+1. Add `src/content/logs/my-slug.md` (filename = URL slug).
+2. Frontmatter:
+
+```yaml
+---
+title: My title
+date: 2026-08-31
+summary: One line, max 160 chars. Shows on the logs index.
+tags:
+  - astro
+project: tide-clock # optional — project filename without .md
+kind: log # log (green) | workshop (magenta)
+draft: false # true = visible in dev, hidden in production
+---
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+3. Body is Markdown. `##` headings become the CONTENTS rail on the post page.
+4. Reading time is computed from word count — no frontmatter field.
 
-## 🚀 Project Structure
+### New / updated project
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Add or edit `src/content/projects/my-slug.md`.
+2. Frontmatter:
+
+```yaml
+---
+name: Tide Clock
+blurb: One-liner for cards.
+status: live # live | wip | dormant
+started: "2026.02" # "YYYY.MM" or "YYYY"
+ended: "2008" # optional — archive shelf year range
+stack:
+  - Astro
+source: https://github.com/…
+demo: https://…
+tags:
+  - astro
+featured: true # shows on the HUD FEATURED row
+order: 3 # sort among active / dormant peers
+---
+```
+
+3. Body renders on `/workshop/my-slug`.
+4. `status: dormant` puts it on the archive shelf. Link a log with `project: my-slug`.
+
+### Tags
+
+No tag files. Tags come from log/project frontmatter and are counted at build time. `/tags` and `/tags/[tag]` update automatically.
+
+## Where things live
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+  site.ts                 identity + nav
+  content/logs/           posts
+  content/projects/       workshop entries
+  content.config.ts       frontmatter schemas
+  lib/content.ts          queries, dates, reading time
+  pages/                  routes
+  components/             UI (Panel, Softkey, Badge, …)
+  layouts/                Base, Page
+  styles/                 tokens.css, base.css, shiki theme
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Routes: `/` · `/logs` · `/logs/[slug]` · `/workshop` · `/workshop/[slug]` · `/tags` · `/tags/[tag]` · `/about` · `/404` · `/rss.xml`
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Deploy
 
-Any static assets, like images, can be placed in the `public/` directory.
+```sh
+pnpm build
+npx wrangler deploy
+```
 
-## 🧞 Commands
+Config: [`wrangler.jsonc`](wrangler.jsonc) (`assets` → `./dist`). Site URL for RSS/canonicals: `site` in [`astro.config.mjs`](astro.config.mjs).
 
-All commands are run from the root of the project, from a terminal:
+## Design constraints (don't break these)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- Zero client JS by default — no React/Vue islands.
+- Plain CSS only — tokens in `src/styles/tokens.css`, no Tailwind.
+- Self-hosted Fontsource fonts — no Google Fonts.
+- Dark theme only. No transitions, shadows, or rounded corners.
+- Badge colors live only in `Badge.astro`.
 
-## 👀 Want to learn more?
+## Agents
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Agent/dev conventions: [`AGENTS.md`](AGENTS.md). Design + implementation specs: [`docs/`](docs/).

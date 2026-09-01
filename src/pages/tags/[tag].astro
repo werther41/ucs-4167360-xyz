@@ -1,0 +1,111 @@
+---
+import type { GetStaticPaths } from 'astro';
+
+import Base from '../../layouts/Base.astro';
+import TagChip from '../../components/TagChip.astro';
+import TagCloud from '../../components/TagCloud.astro';
+import EntryRow from '../../components/EntryRow.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import PanelHeader from '../../components/PanelHeader.astro';
+import { allLogs, siteCounts, tagIndex, taggedEntries } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const tags = await tagIndex();
+  return [...tags.keys()].map((tag) => ({ params: { tag }, props: { tag } }));
+}) satisfies GetStaticPaths;
+
+const { tag } = Astro.props;
+
+const [{ logs, projects }, counts, index, everyLog] = await Promise.all([
+  taggedEntries(tag),
+  siteCounts(),
+  tagIndex(),
+  allLogs(),
+]);
+
+const cloud = [...index.entries()];
+const countFor = (slug: string) => everyLog.filter((e) => e.data.project === slug).length;
+---
+
+<Base
+  title={`Tagged ${tag}`}
+  description={`Logs and projects tagged ${tag}.`}
+  gap={22}
+>
+  <div class="filter">
+    <span class="cap">FILTER</span>
+    <TagChip tag={tag} size="md" active clearHref="/tags" />
+    <span class="cap">
+      {logs.length + projects.length} OF {counts.logs + counts.projects} ENTRIES
+    </span>
+  </div>
+
+  <div class="cloud">
+    <TagCloud tags={cloud} showCounts size="md" active={tag} />
+  </div>
+
+  {
+    projects.length > 0 && (
+      <section aria-labelledby="tagged-projects">
+        <PanelHeader as="h2" variant="section" label="PROJECTS" id="tagged-projects" />
+        <div class="cards">
+          {projects.map((project) => (
+            <ProjectCard project={project} entryCount={countFor(project.id)} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    logs.length > 0 && (
+      <section aria-labelledby="tagged-logs">
+        <PanelHeader as="h2" variant="section" label="LOGS" id="tagged-logs" />
+        <div>
+          {logs.map((entry) => (
+            <EntryRow entry={entry} variant="flat" />
+          ))}
+        </div>
+      </section>
+    )
+  }
+</Base>
+
+<style>
+  .filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .cap {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--label);
+  }
+
+  .cloud {
+    padding-bottom: 18px;
+    border-bottom: 1px dashed var(--line-bright);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  @media (max-width: 1000px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+</style>

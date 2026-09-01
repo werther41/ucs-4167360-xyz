@@ -1,0 +1,52 @@
+---
+import TagChip from './TagChip.astro';
+
+interface Props {
+  tags: [string, number][] | string[];
+  /** Omit counts for the compact rail and filter rows. */
+  showCounts?: boolean;
+  active?: string;
+  size?: 'xs' | 'sm' | 'md';
+  limit?: number;
+  /** A leading "all" chip that clears the filter, as on the logs index. */
+  allHref?: string;
+  class?: string;
+}
+
+const {
+  tags,
+  showCounts = false,
+  active,
+  size = 'sm',
+  limit,
+  allHref,
+  class: className,
+} = Astro.props;
+
+const pairs: [string, number][] = tags.map((t) =>
+  Array.isArray(t) ? t : ([t, 0] as [string, number]),
+);
+const shown = limit ? pairs.slice(0, limit) : pairs;
+---
+
+<div class:list={['cloud', className]}>
+  {allHref && <TagChip tag="all" href={allHref} active={!active} size={size} />}
+  {
+    shown.map(([tag, count]) => (
+      <TagChip
+        tag={tag}
+        count={showCounts ? count : undefined}
+        active={tag === active}
+        size={size}
+      />
+    ))
+  }
+</div>
+
+<style>
+  .cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+</style>

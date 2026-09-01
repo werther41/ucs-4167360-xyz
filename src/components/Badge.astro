@@ -1,0 +1,81 @@
+---
+export type BadgeKind = 'log' | 'workshop' | 'live' | 'wip' | 'dormant';
+
+interface Props {
+  kind: BadgeKind;
+  /** row = fills a feed grid column, inline = article header, card = project card. */
+  size?: 'row' | 'inline' | 'card';
+  label?: string;
+  class?: string;
+}
+
+const { kind, size = 'inline', label, class: className } = Astro.props;
+---
+
+{/* The label always ships with the colour — state is never signalled by hue alone. */}
+<span class:list={['badge', kind, size, className]}>{(label ?? kind).toUpperCase()}</span>
+
+<style>
+  .badge {
+    display: inline-block;
+    font-family: var(--font-chrome);
+    font-weight: 400;
+    border: 1px solid var(--badge-line);
+    color: var(--badge-text);
+    white-space: nowrap;
+  }
+
+  .log,
+  .live {
+    --badge-text: var(--phos);
+    --badge-line: var(--phos-line);
+  }
+
+  .workshop {
+    --badge-text: var(--magenta);
+    --badge-line: var(--magenta-line);
+  }
+
+  .wip {
+    --badge-text: var(--amber);
+    --badge-line: var(--amber-line);
+  }
+
+  .dormant {
+    --badge-text: var(--dead);
+    --badge-line: var(--line-arch);
+  }
+
+  .row {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    padding: 4px 0;
+    text-align: center;
+  }
+
+  .inline {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+  }
+
+  .card {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 3px 7px;
+  }
+
+  @media (max-width: 720px) {
+    .row,
+    .inline {
+      font-size: 8px;
+      padding: 3px 6px;
+      text-align: left;
+    }
+
+    .card {
+      font-size: 9px;
+      padding: 3px 6px;
+    }
+  }
+</style>

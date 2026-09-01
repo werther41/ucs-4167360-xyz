@@ -1,0 +1,62 @@
+:root {
+  /* Surface */
+  --bg: #000000;
+
+  /* Phosphor symbology */
+  --phos: #2fe07a;
+  --phos-bright: #9bffc4;
+
+  /* Text ramp */
+  --text: #d8efe1;
+  --text-value: #c4e4d2;
+  --text-body: #a9c4b4;
+  --text-dim: #7fa891;
+  --text-mute: #6b8f7c;
+  --label: #3f6650;
+  --label-dim: #4a7d61;
+
+  /* Strokes */
+  --line: #16281e;
+  --line-soft: #14261c;
+  --line-faint: #0f1f17;
+  --line-bright: #1d4030;
+  --line-arch: #1b3325;
+  --tick: #123021;
+
+  /* Semantic accents */
+  --amber: #ffc24d;
+  --amber-line: #6b5216;
+  --magenta: #ff6fd0;
+  --magenta-line: #6b2455;
+  --phos-line: #1d6b41;
+
+  /* Washes */
+  --phos-wash: rgba(47, 224, 122, 0.12);
+  --phos-active: rgba(47, 224, 122, 0.24);
+  --phos-hover: rgba(47, 224, 122, 0.07);
+  --phos-hover-soft: rgba(47, 224, 122, 0.05);
+  --dead: #2c4a3a;
+
+  /* Type */
+  --font-chrome: 'Martian Mono', ui-monospace, monospace;
+  --font-body: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --content-max: 1280px;
+  --pad-y: 26px;
+  --pad-x: 30px;
+  --shell-gap: 20px;
+
+  /* Accent bar under page titles */
+  --rule-w: 60px;
+  --rule-h: 2px;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --pad-y: 18px;
+    --pad-x: 16px;
+    --shell-gap: 16px;
+    --rule-w: 48px;
+  }
+}

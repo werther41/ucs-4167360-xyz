@@ -1,0 +1,84 @@
+---
+import type { Log } from '../lib/content';
+
+interface Props {
+  prev?: Log;
+  next?: Log;
+}
+
+const { prev, next } = Astro.props;
+---
+
+{
+  (prev || next) && (
+    <nav class="pn" aria-label="More logs">
+      {prev ? (
+        <a class="cell" href={`/logs/${prev.id}`}>
+          <span class="cap">◂ PREVIOUS</span>
+          <span class="title">{prev.data.title}</span>
+        </a>
+      ) : (
+        <span />
+      )}
+      {next && (
+        <a class="cell right" href={`/logs/${next.id}`}>
+          <span class="cap">NEXT ▸</span>
+          <span class="title">{next.data.title}</span>
+        </a>
+      )}
+    </nav>
+  )
+}
+
+<style>
+  .pn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border: 1px solid var(--line-soft);
+    padding: 14px 16px;
+    color: inherit;
+  }
+
+  .cell:hover {
+    border-color: var(--phos);
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .cap {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--label);
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-value);
+  }
+
+  .cell:hover .title {
+    color: var(--phos-bright);
+  }
+
+  @media (max-width: 720px) {
+    .pn {
+      grid-template-columns: 1fr;
+    }
+
+    .right {
+      text-align: left;
+    }
+  }
+</style>

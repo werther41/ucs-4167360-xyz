@@ -1,0 +1,102 @@
+---
+import Base from '../layouts/Base.astro';
+import PageTitle from '../components/PageTitle.astro';
+import Panel from '../components/Panel.astro';
+import PanelHeader from '../components/PanelHeader.astro';
+import MetaTable from '../components/MetaTable.astro';
+import { site } from '../site';
+import type { MetaRow } from '../lib/types';
+
+const elsewhere: MetaRow[] = [
+  { label: 'GITHUB', value: site.github.handle, href: site.github.url, external: true },
+  { label: 'EMAIL', value: site.email, href: `mailto:${site.email}` },
+  { label: 'RSS', value: site.feed, href: site.feed },
+];
+
+const colophon: MetaRow[] = [
+  { label: 'BUILT', value: site.colophon.built },
+  { label: 'HOSTED', value: site.colophon.hosted },
+  { label: 'TYPE', value: site.colophon.type },
+];
+---
+
+<Base title="About" active="ABOUT" gap={26}>
+  <div class="split">
+    <div class="lead">
+      <PageTitle title="ABOUT" ruleGap={26} />
+
+      <p>
+        Hi. I build diagnostics software — the kind that takes sequencing output and turns it into
+        something a person can act on. Before that I built a lot of websites nobody asked for, and I
+        still do that on weekends.
+      </p>
+      <p>
+        I started in {site.established} on a flight simulation fan site, which explains the look of this
+        one. Fighter jet cockpit displays have been an interest ever since, and it turns out a
+        green-on-black instrument panel is a perfectly reasonable way to list blog posts.
+      </p>
+      <p>
+        This site is where I keep notes so I stop losing them. If something here is useful to you,
+        that is a happy accident.
+      </p>
+    </div>
+
+    <aside class="rail">
+      <Panel pad="14px 16px">
+        <PanelHeader as="h2" label="ELSEWHERE" />
+        <MetaTable rows={elsewhere} size={13} />
+      </Panel>
+
+      <Panel pad="14px 16px">
+        <PanelHeader as="h2" label="COLOPHON" />
+        <MetaTable rows={colophon} />
+      </Panel>
+    </aside>
+  </div>
+</Base>
+
+<style>
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 56px;
+    align-items: start;
+    padding-top: 10px;
+  }
+
+  .lead {
+    max-width: 640px;
+  }
+
+  .lead p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--text-body);
+    text-wrap: pretty;
+  }
+
+  .lead p + p {
+    margin-top: 18px;
+  }
+
+  .rail {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  @media (max-width: 900px) {
+    .split {
+      grid-template-columns: 1fr;
+      gap: 26px;
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .lead p {
+      font-size: 14px;
+      line-height: 1.85;
+    }
+  }
+</style>

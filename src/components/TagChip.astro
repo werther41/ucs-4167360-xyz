@@ -1,0 +1,94 @@
+---
+interface Props {
+  tag: string;
+  count?: number;
+  active?: boolean;
+  /** xs = project card, sm = rail and post footer, md = filter row and cloud. */
+  size?: 'xs' | 'sm' | 'md';
+  /** Renders the active filter's dismiss glyph, linking back to the unfiltered list. */
+  clearHref?: string;
+  href?: string;
+  class?: string;
+}
+
+const { tag, count, active = false, size = 'sm', clearHref, href, class: className } = Astro.props;
+
+const target = clearHref ?? href ?? `/tags/${tag}`;
+const label = clearHref ? `Clear the ${tag} filter` : `Entries tagged ${tag}`;
+---
+
+<a
+  href={target}
+  class:list={['chip', size, { active, filter: !!clearHref }, className]}
+  aria-label={label}
+  aria-current={active && !clearHref ? 'page' : undefined}
+>
+  <span>{tag}</span>
+  {count !== undefined && <span class="count">{count}</span>}
+  {clearHref && <span class="clear" aria-hidden="true">✕</span>}
+</a>
+
+<style>
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--line-bright);
+    color: var(--text-dim);
+    font-family: var(--font-body);
+    white-space: nowrap;
+  }
+
+  .chip:hover {
+    border-color: var(--phos);
+    color: var(--phos-bright);
+  }
+
+  .active {
+    border-color: var(--phos);
+    background: var(--phos-wash);
+    color: var(--phos-bright);
+  }
+
+  .count {
+    color: var(--dead);
+  }
+
+  .active .count {
+    color: var(--phos);
+  }
+
+  .clear {
+    color: var(--phos);
+    padding-left: 4px;
+  }
+
+  .xs {
+    padding: 4px 7px;
+    font-size: 10px;
+    color: var(--text-mute);
+  }
+
+  .sm {
+    padding: 5px 9px;
+    font-size: 11px;
+  }
+
+  .md {
+    padding: 6px 11px;
+    font-size: 11px;
+  }
+
+  /* Only the standalone filter chip scales up; in a cloud it must keep the row rhythm. */
+  .filter {
+    padding: 7px 13px;
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  @media (max-width: 720px) {
+    .chip {
+      min-height: 32px;
+    }
+  }
+</style>

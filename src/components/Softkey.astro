@@ -1,0 +1,111 @@
+---
+interface Props {
+  href?: string;
+  label?: string;
+  active?: boolean;
+  variant?: 'primary' | 'default';
+  /** sm = rail block, md = 404 / utility, lg = hero CTA. */
+  size?: 'sm' | 'md' | 'lg';
+  block?: boolean;
+  external?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  href,
+  label,
+  active = false,
+  variant = 'default',
+  size = 'md',
+  block = false,
+  external = false,
+  class: className,
+  ...rest
+} = Astro.props;
+
+/* A softkey is always a real control — never a styled span. */
+const Tag = href ? 'a' : 'button';
+const extra = external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+---
+
+<Tag
+  href={href}
+  type={href ? undefined : 'button'}
+  class:list={['key', size, variant, { active, block }, className]}
+  aria-current={active ? 'page' : undefined}
+  {...extra}
+  {...rest}
+>
+  {label ?? <slot />}
+</Tag>
+
+<style>
+  .key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-chrome);
+    text-align: center;
+    border: 1px solid var(--line-bright);
+    color: var(--text-dim);
+    cursor: pointer;
+  }
+
+  .block {
+    display: flex;
+    width: 100%;
+  }
+
+  .sm {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 9px 12px;
+    border-color: var(--line-soft);
+    color: var(--label);
+  }
+
+  .md {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 9px 18px;
+  }
+
+  .lg {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    padding: 11px 20px;
+  }
+
+  .key:hover {
+    border-color: var(--phos);
+    color: var(--phos-bright);
+  }
+
+  .primary {
+    border-color: var(--phos);
+    background: var(--phos-wash);
+    color: var(--phos-bright);
+  }
+
+  .primary:hover {
+    background: var(--phos-active);
+  }
+
+  .active {
+    border-color: var(--phos);
+    background: var(--phos-wash);
+    color: var(--phos-bright);
+  }
+
+  @media (max-width: 720px) {
+    .key {
+      min-height: 44px;
+    }
+
+    .lg,
+    .md {
+      padding: 11px 16px;
+    }
+  }
+</style>

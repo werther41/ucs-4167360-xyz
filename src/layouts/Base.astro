@@ -1,0 +1,106 @@
+---
+import '@fontsource/martian-mono/latin-400.css';
+import '@fontsource/martian-mono/latin-500.css';
+import '@fontsource/martian-mono/latin-700.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource/ibm-plex-mono/latin-500.css';
+import '@fontsource/ibm-plex-mono/latin-600.css';
+
+/* The two weights that render above the fold: the wordmark and body copy. */
+import martianBold from '@fontsource/martian-mono/files/martian-mono-latin-700-normal.woff2?url';
+import plexRegular from '@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2?url';
+
+import '../styles/tokens.css';
+import '../styles/base.css';
+
+import Header from '../components/Header.astro';
+import { site, type NavKey } from '../site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  variant?: 'hud' | 'inner';
+  active?: NavKey;
+  counts?: { logs: number; projects: number };
+  back?: { label: string; href: string };
+  /** Vertical rhythm between top-level page blocks; the mockup runs 20–26px. */
+  gap?: number;
+  /** The 404 owns the full frame and supplies its own chrome. */
+  bare?: boolean;
+}
+
+const {
+  title,
+  description = site.description,
+  variant = 'inner',
+  active,
+  counts,
+  back,
+  gap,
+  bare = false,
+} = Astro.props;
+
+const pageTitle = title ? `${title} · ${site.name}` : site.name;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="preload" as="font" type="font/woff2" href={martianBold} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={plexRegular} crossorigin />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="alternate" type="application/rss+xml" title={site.name} href="/rss.xml" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">SKIP TO CONTENT</a>
+
+    <div class:list={['shell', { bare }]} style={gap ? `--shell-gap:${gap}px` : undefined}>
+      {!bare && <Header variant={variant} active={active} counts={counts} back={back} />}
+      <main id="main" class="stack">
+        <slot />
+      </main>
+    </div>
+
+    <style>
+      .shell {
+        max-width: var(--content-max);
+        margin: 0 auto;
+        padding: var(--pad-y) var(--pad-x) 22px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--shell-gap);
+      }
+
+      /* The 404 is full-bleed: its tick frame measures from the viewport edge. */
+      .shell.bare {
+        padding: 0;
+      }
+
+      .stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--shell-gap);
+      }
+    </style>
+  </body>
+</html>

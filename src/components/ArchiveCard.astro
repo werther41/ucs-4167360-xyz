@@ -1,0 +1,85 @@
+---
+import Panel from './Panel.astro';
+import { yearRange, type Project } from '../lib/content';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const { name, blurb, started, ended } = project.data;
+---
+
+{/* Dashed and muted throughout: the shelf reads as dormant at a glance. */}
+<Panel
+  as="a"
+  href={`/workshop/${project.id}`}
+  tone="arch"
+  dashed
+  hover
+  pad="14px"
+  class="card"
+>
+  <span class="years">{yearRange(started, ended)}</span>
+  <span class="name">{name}</span>
+  <span class="blurb">{blurb}</span>
+</Panel>
+
+<style>
+  .card {
+    display: block;
+    color: inherit;
+  }
+
+  .years {
+    display: block;
+    font-size: 10px;
+    color: var(--dead);
+    margin-bottom: 9px;
+  }
+
+  .name {
+    display: block;
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+  }
+
+  .card:hover .name {
+    color: var(--phos-bright);
+  }
+
+  .blurb {
+    display: block;
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--label);
+  }
+
+  @media (max-width: 720px) {
+    /* The shelf collapses to name/year rows. */
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      padding: 11px 12px;
+    }
+
+    .years {
+      order: 2;
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+
+    .name {
+      order: 1;
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+
+    .blurb {
+      display: none;
+    }
+  }
+</style>

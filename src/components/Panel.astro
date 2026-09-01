@@ -1,0 +1,172 @@
+---
+interface Props {
+  /** full = four corners, corners = top-left and bottom-right only. */
+  bracket?: 'full' | 'corners' | 'none';
+  /** Arm length: 13 on the hero, 11 on primary panels, 9 on cards. */
+  size?: number;
+  tone?: 'line' | 'bright' | 'arch';
+  dashed?: boolean;
+  hover?: boolean;
+  /** Vertical tick columns down the inner edges, as on the hero. */
+  ticks?: boolean;
+  /** Any CSS padding shorthand. A prop rather than a class: scoped styles from
+   *  a parent do not reach a child component's root element. */
+  pad?: string;
+  /** Padding below 720px, where the desktop insets are far too generous. */
+  padSm?: string;
+  as?: string;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  bracket = 'none',
+  size = 11,
+  tone = 'line',
+  dashed = false,
+  hover = false,
+  ticks = false,
+  pad,
+  padSm,
+  as: Tag = 'div',
+  class: className,
+  style,
+  ...rest
+} = Astro.props;
+
+const styles = [
+  `--bk:${size}px`,
+  pad && `--panel-pad:${pad}`,
+  padSm && `--panel-pad-sm:${padSm}`,
+  style,
+]
+  .filter(Boolean)
+  .join(';');
+---
+
+<Tag
+  class:list={['panel', `tone-${tone}`, { dashed, hover }, className]}
+  style={styles}
+  {...rest}
+>
+  {
+    ticks && (
+      <>
+        <span class="vtick left" aria-hidden="true" />
+        <span class="vtick right" aria-hidden="true" />
+      </>
+    )
+  }
+  {
+    bracket !== 'none' && (
+      <>
+        <span class="bk tl" aria-hidden="true" />
+        <span class="bk br" aria-hidden="true" />
+        {bracket === 'full' && (
+          <>
+            <span class="bk tr" aria-hidden="true" />
+            <span class="bk bl" aria-hidden="true" />
+          </>
+        )}
+      </>
+    )
+  }
+  <slot />
+</Tag>
+
+<style>
+  .panel {
+    position: relative;
+    border: 1px solid var(--panel-line);
+    padding: var(--panel-pad, 0);
+  }
+
+  .tone-line {
+    --panel-line: var(--line);
+  }
+
+  .tone-bright {
+    --panel-line: var(--line-bright);
+  }
+
+  .tone-arch {
+    --panel-line: var(--line-arch);
+  }
+
+  .dashed {
+    border-style: dashed;
+  }
+
+  .hover:hover {
+    border-color: var(--phos);
+    background: var(--phos-hover-soft);
+  }
+
+  .dashed.hover:hover {
+    border-color: var(--label);
+    background: none;
+  }
+
+  /* Brackets sit a hair outside the border so the two strokes overlap, not stack. */
+  .bk {
+    position: absolute;
+    width: var(--bk);
+    height: var(--bk);
+    pointer-events: none;
+  }
+
+  .tl {
+    left: -1px;
+    top: -1px;
+    border-left: 1px solid var(--phos);
+    border-top: 1px solid var(--phos);
+  }
+
+  .tr {
+    right: -1px;
+    top: -1px;
+    border-right: 1px solid var(--phos);
+    border-top: 1px solid var(--phos);
+  }
+
+  .bl {
+    left: -1px;
+    bottom: -1px;
+    border-left: 1px solid var(--phos);
+    border-bottom: 1px solid var(--phos);
+  }
+
+  .br {
+    right: -1px;
+    bottom: -1px;
+    border-right: 1px solid var(--phos);
+    border-bottom: 1px solid var(--phos);
+  }
+
+  .vtick {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(180deg, var(--tick) 0 1px, transparent 1px 20px);
+  }
+
+  .vtick.left {
+    left: 14px;
+  }
+
+  .vtick.right {
+    right: 14px;
+  }
+
+  @media (max-width: 720px) {
+    .panel {
+      padding: var(--panel-pad-sm, var(--panel-pad, 0));
+    }
+
+    .vtick {
+      display: none;
+    }
+  }
+</style>

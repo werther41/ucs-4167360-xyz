@@ -1,0 +1,12 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+{/* Styling lives in base.css so rendered markdown is reachable without :global. */}
+<div class:list={['prose', className]}>
+  <slot />
+</div>

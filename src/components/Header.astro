@@ -1,0 +1,237 @@
+---
+import Mark from "./Mark.astro";
+import NavSoftkeys from "./NavSoftkeys.astro";
+import { nav, site, type NavKey } from "../site";
+
+interface Props {
+  /** The HUD carries the domain and the count readout; inner pages carry inline nav. */
+  variant?: "hud" | "inner";
+  active?: NavKey;
+  counts?: { logs: number; projects: number };
+  /** Mobile-only backlink that stands in for the wordmark, as on a log post. */
+  back?: { label: string; href: string };
+}
+
+const { variant = "inner", active, counts, back } = Astro.props;
+---
+
+<header class="hd">
+  {
+    back && (
+      <a class="back" href={back.href}>
+        ◂ {back.label}
+      </a>
+    )
+  }
+
+  <a class:list={["brand", { "has-back": !!back }]} href="/">
+    <Mark />
+    <span class="wordmark">{site.name.toUpperCase()}</span>
+    {
+      variant === "hud" && (
+        <span class="domain">{site.domain.toUpperCase()}</span>
+      )
+    }
+  </a>
+
+  {
+    variant === "hud" && counts ? (
+      <p class="readout">
+        <span>
+          {counts.logs} {counts.logs === 1 ? "LOG" : "LOGS"}
+        </span>
+        <span class="sep" aria-hidden="true">
+          |
+        </span>
+        <span>
+          {counts.projects} {counts.projects === 1 ? "PROJECT" : "PROJECTS"}
+        </span>
+        <span class="sep" aria-hidden="true">
+          |
+        </span>
+        <span class="est">EST. {site.established}</span>
+      </p>
+    ) : (
+      <nav class="inline" aria-label="Primary">
+        {nav.map((item) => (
+          <a
+            href={item.href}
+            class:list={["link", { "is-active": item.label === active }]}
+            aria-current={item.label === active ? "page" : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    )
+  }
+
+  <details class="menu">
+    <summary>MENU</summary>
+    <div class="panel">
+      <NavSoftkeys active={active} label="Menu" />
+    </div>
+  </details>
+</header>
+
+<style>
+  .hd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+  }
+
+  .wordmark {
+    font-family: var(--font-chrome);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    color: var(--phos-bright);
+  }
+
+  .domain {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--label);
+    padding-left: 6px;
+  }
+
+  .readout {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--label);
+  }
+
+  .sep {
+    color: var(--line-bright);
+  }
+
+  .est {
+    color: var(--phos);
+  }
+
+  .inline {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-family: var(--font-chrome);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+  }
+
+  .link {
+    color: var(--label-dim);
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .link:hover {
+    color: var(--phos-bright);
+  }
+
+  .link.is-active {
+    color: var(--phos-bright);
+    border-bottom-color: var(--phos);
+  }
+
+  /* Stands in for the wordmark on mobile only; desktop keeps the full brand. */
+  .back {
+    display: none;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--label-dim);
+  }
+
+  .back:hover {
+    color: var(--phos-bright);
+  }
+
+  /* A CSS-only disclosure keeps the mobile menu working without shipping JS. */
+  .menu {
+    display: none;
+  }
+
+  .menu > summary {
+    list-style: none;
+    border: 1px solid var(--line-bright);
+    color: var(--label-dim);
+    padding: 0 9px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-chrome);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+
+  .menu > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .menu[open] > summary {
+    border-color: var(--phos);
+    color: var(--phos-bright);
+  }
+
+  .panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 5;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    padding: 10px;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 720px) {
+    .hd {
+      padding-bottom: 12px;
+    }
+
+    .brand {
+      gap: 9px;
+    }
+
+    .brand.has-back,
+    .readout,
+    .inline {
+      display: none;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    .wordmark {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+    }
+
+    .domain {
+      display: none;
+    }
+
+    .menu {
+      display: block;
+    }
+  }
+</style>

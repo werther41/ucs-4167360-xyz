@@ -1,0 +1,15 @@
+---
+import Page from '../../layouts/Page.astro';
+import TagCloud from '../../components/TagCloud.astro';
+import { tagIndex } from '../../lib/content';
+
+const tags = [...(await tagIndex()).entries()];
+---
+
+<Page
+  title="Tags"
+  lede={`Every tag across the logs and the workshop. ${tags.length} in total, ordered by how often they come up.`}
+  ledeMax={560}
+>
+  <TagCloud tags={tags} showCounts size="md" />
+</Page>

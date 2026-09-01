@@ -1,0 +1,30 @@
+---
+interface Props {
+  vertical?: boolean;
+  /** Mark spacing: 22 for section rules, 20 on mobile, 26 on the 404 frame. */
+  pitch?: number;
+  /** Cross-axis thickness. */
+  size?: number;
+  tone?: 'bright' | 'tick';
+  class?: string;
+}
+
+const { vertical = false, pitch = 22, size = 7, tone = 'bright', class: className } = Astro.props;
+
+const angle = vertical ? '180deg' : '90deg';
+const color = tone === 'tick' ? 'var(--tick)' : 'var(--line-bright)';
+const axis = vertical ? `width:${size}px` : `height:${size}px`;
+---
+
+<div
+  class:list={['tick', className]}
+  aria-hidden="true"
+  style={`${axis};background-image:repeating-linear-gradient(${angle},${color} 0 1px,transparent 1px ${pitch}px)`}
+>
+</div>
+
+<style>
+  .tick {
+    flex: none;
+  }
+</style>

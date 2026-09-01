@@ -1,0 +1,43 @@
+---
+import Base from './Base.astro';
+import PageTitle from '../components/PageTitle.astro';
+import type { NavKey } from '../site';
+
+interface Props {
+  title: string;
+  heading?: string;
+  lede?: string;
+  ledeMax?: number;
+  description?: string;
+  active?: NavKey;
+  gap?: number;
+}
+
+const { title, heading, lede, ledeMax, description, active, gap } = Astro.props;
+---
+
+<Base title={title} description={description ?? lede} active={active} gap={gap}>
+  <div class="titlebar">
+    <PageTitle title={heading ?? title.toUpperCase()} lede={lede} ledeMax={ledeMax} />
+    <slot name="aside" />
+  </div>
+
+  <slot />
+</Base>
+
+<style>
+  .titlebar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .titlebar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+    }
+  }
+</style>

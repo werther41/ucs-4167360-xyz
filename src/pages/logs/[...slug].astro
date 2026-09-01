@@ -1,0 +1,273 @@
+---
+import { render } from "astro:content";
+import type { GetStaticPaths } from "astro";
+
+import Base from "../../layouts/Base.astro";
+import Badge from "../../components/Badge.astro";
+import Prose from "../../components/Prose.astro";
+import Panel from "../../components/Panel.astro";
+import PanelHeader from "../../components/PanelHeader.astro";
+import TagChip from "../../components/TagChip.astro";
+import PrevNext from "../../components/PrevNext.astro";
+import {
+  allLogs,
+  formatFull,
+  logsByProject,
+  neighbours,
+  projectBySlug,
+  readingTime,
+} from "../../lib/content";
+
+export const getStaticPaths = (async () => {
+  const logs = await allLogs();
+  return logs.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const { title, date, summary, tags, kind, project: projectSlug } = entry.data;
+
+const { Content, headings } = await render(entry);
+const contents = headings.filter((h) => h.depth === 2 || h.depth === 3);
+
+const project = projectSlug ? await projectBySlug(projectSlug) : undefined;
+const projectEntries = projectSlug ? await logsByProject(projectSlug) : [];
+const { prev, next } = await neighbours(entry.id);
+
+const minutes = readingTime(entry.body);
+const meta = [formatFull(date), `${minutes} MIN`, projectSlug?.toUpperCase()]
+  .filter(Boolean)
+  .join(" · ");
+
+const hasRail = contents.length > 0 || !!project;
+---
+
+<Base
+  title={title}
+  description={summary}
+  active="LOGS"
+  back={{ label: "LOGS", href: "/logs" }}
+  gap={26}
+>
+  <nav class="back" aria-label="Back to logs">
+    <a href="/logs">◂ LOGS</a>
+  </nav>
+
+  <div class:list={["split", { solo: !hasRail }]}>
+    <article class="entry">
+      <div class="meta">
+        <Badge kind={kind} size="inline" />
+        <span class="stamp">{meta}</span>
+      </div>
+
+      <h1 class="title">{title}</h1>
+
+      <Prose>
+        <Content />
+      </Prose>
+
+      {
+        tags.length > 0 && (
+          <footer class="tags">
+            {tags.map((tag) => (
+              <TagChip tag={tag} size="sm" />
+            ))}
+          </footer>
+        )
+      }
+    </article>
+
+    {
+      hasRail && (
+        <aside class="rail">
+          {contents.length > 0 && (
+            <Panel pad="14px 16px">
+              <PanelHeader label="CONTENTS" />
+              <nav class="toc" aria-label="On this page">
+                {contents.map((h) => (
+                  <a
+                    href={`#${h.slug}`}
+                    class:list={["toc-link", { sub: h.depth === 3 }]}
+                  >
+                    {h.text}
+                  </a>
+                ))}
+              </nav>
+            </Panel>
+          )}
+
+          {project && (
+            <Panel pad="14px 16px">
+              <PanelHeader label="PROJECT" />
+              <a class="project" href={`/workshop/${project.id}`}>
+                <span class="project-name">{project.data.name}</span>
+                <span class="project-meta">
+                  {projectEntries.length}{" "}
+                  {projectEntries.length === 1 ? "ENTRY" : "ENTRIES"} ·{" "}
+                  {project.data.status.toUpperCase()}
+                </span>
+              </a>
+            </Panel>
+          )}
+        </aside>
+      )
+    }
+  </div>
+
+  <PrevNext prev={prev} next={next} />
+</Base>
+
+<style>
+  .back {
+    font-size: 16px;
+  }
+
+  .back a {
+    color: var(--phos);
+  }
+
+  .back a:hover {
+    color: var(--phos-bright);
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 236px;
+    gap: 44px;
+    align-items: start;
+  }
+
+  .split.solo {
+    grid-template-columns: 1fr;
+  }
+
+  .entry {
+    max-width: 700px;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .stamp {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--label);
+  }
+
+  .title {
+    font-family: var(--font-chrome);
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+    color: var(--text);
+    text-wrap: balance;
+    margin-bottom: 24px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-top: 1px dashed var(--line-bright);
+    margin-top: 30px;
+    padding-top: 18px;
+  }
+
+  .rail {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: sticky;
+    top: 24px;
+  }
+
+  .toc {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 12px;
+  }
+
+  .toc-link {
+    color: var(--text-mute);
+    line-height: 1.45;
+  }
+
+  .toc-link:hover {
+    color: var(--phos-bright);
+  }
+
+  .sub {
+    padding-left: 12px;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: inherit;
+  }
+
+  .project-name {
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .project:hover .project-name {
+    color: var(--phos-bright);
+  }
+
+  .project-meta {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--label);
+  }
+
+  @media (max-width: 900px) {
+    .split {
+      grid-template-columns: 1fr;
+      gap: 26px;
+    }
+
+    .rail {
+      position: static;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .back a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    .meta {
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+
+    .stamp {
+      font-size: 10px;
+      letter-spacing: 0.06em;
+    }
+
+    .title {
+      font-size: 19px;
+      line-height: 1.45;
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      margin-top: 24px;
+      padding-top: 16px;
+      gap: 7px;
+    }
+  }
+</style>

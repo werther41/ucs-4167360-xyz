@@ -1,0 +1,123 @@
+---
+import Page from '../../layouts/Page.astro';
+import TickRule from '../../components/TickRule.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import ArchiveCard from '../../components/ArchiveCard.astro';
+import { activeProjects, allLogs, dormantProjects } from '../../lib/content';
+
+const [active, dormant, logs] = await Promise.all([
+  activeProjects(),
+  dormantProjects(),
+  allLogs(),
+]);
+
+const countFor = (slug: string) => logs.filter((e) => e.data.project === slug).length;
+---
+
+<Page
+  title="Workshop"
+  lede="Things I have built, finished or otherwise. Not a portfolio — a bench."
+  ledeMax={560}
+  active="WORKSHOP"
+  gap={24}
+>
+  <div class="grid">
+    {
+      active.map((project) => (
+        <ProjectCard project={project} entryCount={countFor(project.id)} showTags />
+      ))
+    }
+  </div>
+
+  {
+    dormant.length > 0 && (
+      <>
+        <div class="rule">
+          <TickRule />
+        </div>
+
+        <section id="archive" aria-labelledby="archive-head">
+          <div class="shelf-head">
+            <h2 class="shelf-title" id="archive-head">
+              ARCHIVE SHELF
+            </h2>
+            <span class="shelf-note">DORMANT · KEPT FOR SENTIMENT</span>
+          </div>
+          <div class="shelf">
+            {dormant.map((project) => (
+              <ArchiveCard project={project} />
+            ))}
+          </div>
+        </section>
+      </>
+    )
+  }
+</Page>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .rule {
+    margin-top: 12px;
+  }
+
+  .shelf-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 6px;
+  }
+
+  .shelf-title {
+    font-family: var(--font-chrome);
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    color: var(--label-dim);
+  }
+
+  .shelf-note {
+    font-size: 11px;
+    color: var(--dead);
+  }
+
+  .shelf {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  @media (max-width: 1000px) {
+    .grid,
+    .shelf {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .shelf {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .shelf-head {
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 0;
+    }
+
+    .shelf-title {
+      font-size: 10px;
+    }
+  }
+</style>

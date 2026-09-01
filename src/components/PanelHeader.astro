@@ -1,0 +1,96 @@
+---
+interface Props {
+  label: string;
+  /** Right-aligned readout, e.g. "ALL 34 ▸". */
+  meta?: string;
+  metaHref?: string;
+  /** rail = inside a side panel, inset = inside a bordered panel, section = bare section label. */
+  variant?: 'rail' | 'inset' | 'section';
+  as?: string;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  label,
+  meta,
+  metaHref,
+  variant = 'rail',
+  as: Tag = 'div',
+  class: className,
+  ...rest
+} = Astro.props;
+---
+
+<Tag class:list={['head', variant, className]} {...rest}>
+  <span class="label">{label}</span>
+  {
+    meta &&
+      (metaHref ? (
+        <a class="meta link" href={metaHref}>
+          {meta}
+        </a>
+      ) : (
+        <span class="meta">{meta}</span>
+      ))
+  }
+</Tag>
+
+<style>
+  .head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
+  .label {
+    font-family: var(--font-chrome);
+    color: var(--phos);
+    letter-spacing: 0.14em;
+  }
+
+  .meta {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--label);
+    white-space: nowrap;
+  }
+
+  a.meta:hover {
+    color: var(--phos-bright);
+  }
+
+  .rail {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--line-bright);
+    margin-bottom: 12px;
+  }
+
+  .rail .label {
+    font-size: 9px;
+  }
+
+  .inset {
+    padding: 13px 18px;
+    border-bottom: 1px dashed var(--line-bright);
+  }
+
+  .inset .label {
+    font-size: 10px;
+  }
+
+  .section {
+    margin-bottom: 14px;
+  }
+
+  .section .label {
+    font-size: 10px;
+  }
+
+  @media (max-width: 720px) {
+    .inset {
+      padding: 12px 14px;
+    }
+  }
+</style>

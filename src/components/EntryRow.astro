@@ -1,0 +1,116 @@
+---
+import Badge from './Badge.astro';
+import { formatFull, type Log } from '../lib/content';
+
+interface Props {
+  entry: Log;
+  /** Only the newest row carries a lit marker; the rest are unlit. */
+  lit?: boolean;
+  /** panel = inside the HUD feed panel, flat = standalone list. */
+  variant?: 'panel' | 'flat';
+  class?: string;
+}
+
+const { entry, lit = false, variant = 'panel', class: className } = Astro.props;
+const { title, date, kind } = entry.data;
+---
+
+<a href={`/logs/${entry.id}`} class:list={['row', variant, className]}>
+  {
+    variant === 'panel' && (
+      <span class:list={['marker', { lit }]} aria-hidden="true">
+        ▸
+      </span>
+    )
+  }
+  <time class="date" datetime={date.toISOString()}>{formatFull(date)}</time>
+  <Badge kind={kind} size="row" />
+  <span class="title">{title}</span>
+</a>
+
+<style>
+  .row {
+    display: grid;
+    align-items: center;
+    gap: 0 16px;
+    color: inherit;
+  }
+
+  .panel {
+    grid-template-columns: 14px 92px 88px 1fr;
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--line-faint);
+  }
+
+  .panel:hover {
+    background: var(--phos-hover);
+  }
+
+  .flat {
+    grid-template-columns: 92px 88px 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .flat:hover {
+    background: var(--phos-hover-soft);
+  }
+
+  .marker {
+    font-size: 11px;
+    color: var(--dead);
+  }
+
+  .marker.lit {
+    color: var(--phos);
+  }
+
+  .date {
+    font-size: 12px;
+    color: var(--label);
+  }
+
+  .title {
+    font-size: 15px;
+    color: var(--text);
+  }
+
+  .row:hover .title {
+    color: var(--phos-bright);
+  }
+
+  @media (max-width: 720px) {
+    /* Restack: badge and date share a line, title spans the row beneath. */
+    .row {
+      grid-template-columns: auto 1fr;
+      gap: 7px 10px;
+      justify-items: start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .panel {
+      padding: 14px;
+    }
+
+    .marker {
+      display: none;
+    }
+
+    /* Badge owns its own root class; reach it without relying on scope forwarding. */
+    .row :global(.badge) {
+      order: 1;
+    }
+
+    .date {
+      order: 2;
+      font-size: 11px;
+    }
+
+    .title {
+      order: 3;
+      grid-column: 1 / -1;
+      line-height: 1.45;
+    }
+  }
+</style>

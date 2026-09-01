@@ -1,0 +1,285 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--phos);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--phos-bright);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* The direction has no motion in it; keep it that way. */
+*,
+*::before,
+*::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+:focus-visible {
+  outline: 1px solid var(--phos);
+  outline-offset: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10;
+  font-family: var(--font-chrome);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--phos-bright);
+  background: var(--bg);
+  border: 1px solid var(--phos);
+  padding: 11px 18px;
+}
+
+.skip:focus {
+  left: var(--pad-x);
+  top: var(--pad-y);
+}
+
+/* Visually hidden but read aloud. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Rendered markdown ---------------------------------------------- */
+
+.prose {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-body);
+  text-wrap: pretty;
+}
+
+.prose > * + * {
+  margin-top: 18px;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: var(--font-chrome);
+  font-weight: 500;
+  color: var(--phos-bright);
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  scroll-margin-top: 24px;
+}
+
+.prose h2 {
+  font-size: 16px;
+  margin-top: 38px;
+}
+
+.prose h3 {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  margin-top: 30px;
+}
+
+.prose h4 {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--phos);
+  margin-top: 26px;
+}
+
+.prose strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose a {
+  color: var(--phos);
+  border-bottom: 1px solid var(--line-bright);
+}
+
+.prose a:hover {
+  color: var(--phos-bright);
+  border-bottom-color: var(--phos);
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--phos);
+  padding: 2px 0 2px 18px;
+  margin: 26px 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--phos-bright);
+}
+
+.prose blockquote > * + * {
+  margin-top: 12px;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 22px;
+}
+
+.prose li + li {
+  margin-top: 8px;
+}
+
+.prose ul li::marker {
+  color: var(--phos);
+  content: "▸  ";
+}
+
+.prose ol li::marker {
+  color: var(--label);
+}
+
+.prose hr {
+  border: 0;
+  height: 7px;
+  margin: 30px 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--line-bright) 0 1px,
+    transparent 1px 22px
+  );
+}
+
+.prose code {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--amber);
+  border: 1px solid var(--line-soft);
+  padding: 1px 5px;
+}
+
+.prose pre {
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.prose pre code {
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.prose img {
+  border: 1px solid var(--line);
+  width: 100%;
+}
+
+.prose figcaption {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--label);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.prose th,
+.prose td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.prose th {
+  font-family: var(--font-chrome);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--phos);
+  font-weight: 400;
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 14px;
+  }
+
+  .prose {
+    font-size: 14px;
+  }
+
+  .prose blockquote {
+    font-size: 14px;
+    line-height: 1.7;
+    padding-left: 14px;
+    margin: 22px 0;
+  }
+}

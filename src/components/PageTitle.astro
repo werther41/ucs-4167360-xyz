@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  lede?: string;
+  /** Space below the accent bar; the about page runs looser than the indexes. */
+  ruleGap?: number;
+  ledeMax?: number;
+  class?: string;
+}
+
+const { title, lede, ruleGap = 12, ledeMax = 520, class: className } = Astro.props;
+---
+
+<div class:list={['block', className]}>
+  <h1 class="title">{title}</h1>
+  <div class="rule" aria-hidden="true" style={`margin-bottom:${ruleGap}px`}></div>
+  {lede && <p class="lede" style={`max-width:${ledeMax}px`}>{lede}</p>}
+</div>
+
+<style>
+  .title {
+    font-family: var(--font-chrome);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    color: var(--phos-bright);
+  }
+
+  .rule {
+    width: var(--rule-w);
+    height: var(--rule-h);
+    background: var(--phos);
+    margin-top: 10px;
+  }
+
+  .lede {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 720px) {
+    .title {
+      font-size: 16px;
+    }
+
+    .rule {
+      margin-top: 9px;
+    }
+
+    .lede {
+      font-size: 13px;
+      max-width: none !important;
+    }
+  }
+</style>

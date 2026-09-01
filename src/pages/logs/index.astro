@@ -1,0 +1,61 @@
+---
+import Page from '../../layouts/Page.astro';
+import TickRule from '../../components/TickRule.astro';
+import TagCloud from '../../components/TagCloud.astro';
+import LogRow from '../../components/LogRow.astro';
+import { allLogs, groupByYear, siteCounts, tagIndex } from '../../lib/content';
+
+const logs = await allLogs();
+const groups = groupByYear(logs);
+const counts = await siteCounts();
+const tags = [...(await tagIndex()).entries()].slice(0, 4);
+
+const lede = `Thoughts, write-ups, and whatever I was chewing on that week. ${counts.logs} ${
+  counts.logs === 1 ? 'entry' : 'entries'
+} since ${counts.since}.`;
+---
+
+<Page title="Logs" lede={lede} active="LOGS">
+  <TagCloud slot="aside" tags={tags} size="md" allHref="/logs" />
+
+  <TickRule />
+
+  <div class="years">
+    {
+      groups.map((group) => (
+        <section class="year" aria-labelledby={`y-${group.year}`}>
+          <h2 class="stamp" id={`y-${group.year}`}>
+            {group.year}
+          </h2>
+          <div class="rows">
+            {group.entries.map((entry) => (
+              <LogRow entry={entry} />
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</Page>
+
+<style>
+  .years {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .stamp {
+    font-family: var(--font-chrome);
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--label);
+    padding-bottom: 10px;
+  }
+
+  /* The run of rows closes with a rule; each row already opens with one. */
+  .rows {
+    border-bottom: 1px solid var(--line-soft);
+  }
+</style>
