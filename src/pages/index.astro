@@ -1,14 +1,14 @@
 ---
-import Base from '../layouts/Base.astro';
-import NavSoftkeys from '../components/NavSoftkeys.astro';
-import Panel from '../components/Panel.astro';
-import PanelHeader from '../components/PanelHeader.astro';
-import TickRule from '../components/TickRule.astro';
-import Softkey from '../components/Softkey.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import EntryRow from '../components/EntryRow.astro';
-import TagCloud from '../components/TagCloud.astro';
-import MetaTable from '../components/MetaTable.astro';
+import Base from "../layouts/Base.astro";
+import NavSoftkeys from "../components/NavSoftkeys.astro";
+import Panel from "../components/Panel.astro";
+import PanelHeader from "../components/PanelHeader.astro";
+import TickRule from "../components/TickRule.astro";
+import Softkey from "../components/Softkey.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import EntryRow from "../components/EntryRow.astro";
+import TagCloud from "../components/TagCloud.astro";
+import MetaTable from "../components/MetaTable.astro";
 import {
   allLogs,
   allProjects,
@@ -16,9 +16,10 @@ import {
   formatShort,
   siteCounts,
   tagIndex,
-} from '../lib/content';
-import type { MetaRow } from '../lib/types';
-import { site } from '../site';
+} from "../lib/content";
+import type { MetaRow } from "../lib/types";
+import { site } from "../site";
+import TsdBg from "../assets/f-35-tsd-bg.svg";
 
 const [logs, projects, featured, counts, tags] = await Promise.all([
   allLogs(),
@@ -30,34 +31,47 @@ const [logs, projects, featured, counts, tags] = await Promise.all([
 
 const recent = logs.slice(0, 6);
 const railTags = [...tags.entries()].slice(0, 5);
-const countFor = (slug: string) => logs.filter((e) => e.data.project === slug).length;
+const countFor = (slug: string) =>
+  logs.filter((e) => e.data.project === slug).length;
 
 const status: MetaRow[] = [
-  { label: 'LAST LOG', value: counts.lastLog ? formatShort(counts.lastLog) : '—' },
-  { label: 'BUILDING', value: site.building, tone: 'amber' },
-  { label: 'LOCATION', value: site.location },
+  {
+    label: "LAST LOG",
+    value: counts.lastLog ? formatShort(counts.lastLog) : "—",
+  },
+  { label: "BUILDING", value: site.building, tone: "amber" },
+  { label: "LOCATION", value: site.location },
 ];
 ---
 
 <Base variant="hud" active="HUD" counts={counts}>
   <NavSoftkeys active="HUD" />
 
-  <Panel bracket="full" size={13} tone="bright" ticks pad="46px 40px 40px" padSm="26px 18px">
+  <Panel bracket="full" size={13} tone="bright" ticks>
+    <div class="hero-bg-wrap" aria-hidden="true">
+      <TsdBg class="hero-bg" />
+    </div>
     <div class="hero">
       <div class="hero-lead">
         <p class="eyebrow">{site.domain.toUpperCase()}</p>
         <h1 class="h1">{site.name}</h1>
         <p class="intro">
-          Diagnostics software during the week, small useless web things on the weekend. This is
-          where the notes, the half-finished projects and twenty years of old websites all end up.
+          Diagnostics software during the week, small useless web things on the
+          weekend. This is where the notes, the half-finished projects and
+          twenty years of old websites all end up.
         </p>
         <div class="ctas">
-          <Softkey href="/logs" label="READ THE LOGS" variant="primary" size="lg" />
+          <Softkey
+            href="/logs"
+            label="READ THE LOGS"
+            variant="primary"
+            size="lg"
+          />
           <Softkey href="/workshop" label="OPEN THE WORKSHOP" size="lg" />
         </div>
       </div>
 
-      <Panel pad="14px 16px">
+      <Panel bracket="full" size={11} pad="14px 16px">
         <PanelHeader as="h2" label="STATUS" />
         <MetaTable rows={status} />
       </Panel>
@@ -104,7 +118,13 @@ const status: MetaRow[] = [
 
       <div class="keys">
         <Softkey href="/rss.xml" label="RSS" size="sm" block />
-        <Softkey href={site.github.url} label="GITHUB" size="sm" block external />
+        <Softkey
+          href={site.github.url}
+          label="GITHUB"
+          size="sm"
+          block
+          external
+        />
         <Softkey href="/tags" label="TAGS" size="sm" block />
         <Softkey href="/workshop#archive" label="ARCHIVE" size="sm" block />
       </div>
@@ -113,12 +133,29 @@ const status: MetaRow[] = [
 </Base>
 
 <style>
+  .hero-bg-wrap {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .hero-bg-wrap :global(.hero-bg) {
+    position: absolute;
+    top: 40px;
+    right: -60px;
+    width: 680px;
+    height: 680px;
+  }
+
   .hero {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: 1fr 210px;
+    grid-template-columns: 1fr 260px;
     gap: 48px;
     align-items: start;
-    padding: 0 26px;
+    padding: 50px 60px;
   }
 
   .eyebrow {
@@ -188,7 +225,7 @@ const status: MetaRow[] = [
     .hero {
       grid-template-columns: 1fr;
       gap: 26px;
-      padding: 0;
+      padding: 46px 40px 40px;
     }
 
     .cards {
@@ -201,6 +238,10 @@ const status: MetaRow[] = [
   }
 
   @media (max-width: 720px) {
+    .hero {
+      padding: 26px 18px;
+    }
+
     .h1 {
       font-size: 24px;
       margin: 16px 0 14px;
