@@ -1,0 +1,103 @@
+media:
+  input: public/images # Update this to src/assets if you use Astro's native asset optimization
+  output: /images
+
+content:
+  - name: logs
+    label: Logs
+    type: collection
+    path: src/content/logs
+    format: frontmatter
+    view:
+      fields: [title, date, kind, draft]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: summary
+        label: Summary
+        type: string
+        description: "One line, max 160 chars. Shows on the logs index."
+      - name: tags
+        label: Tags
+        type: list
+      - name: project
+        label: Project
+        type: string
+        description: "Optional — project filename without .md"
+      - name: kind
+        label: Kind
+        type: select
+        options:
+          - log
+          - workshop
+        default: log
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: body
+        label: Body
+        type: richtext
+
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projects
+    format: frontmatter
+    view:
+      fields: [name, status, started, featured]
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: blurb
+        label: Blurb
+        type: string
+        description: "One-liner for cards."
+      - name: status
+        label: Status
+        type: select
+        options:
+          - live
+          - wip
+          - dormant
+        default: live
+      - name: started
+        label: Started
+        type: string
+        description: 'Format: "YYYY.MM" or "YYYY"'
+      - name: ended
+        label: Ended
+        type: string
+        description: "Optional — archive shelf year range"
+      - name: stack
+        label: Stack
+        type: list
+      - name: source
+        label: Source URL
+        type: string
+      - name: demo
+        label: Demo URL
+        type: string
+      - name: tags
+        label: Tags
+        type: list
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+        description: "Shows on the HUD FEATURED row"
+      - name: order
+        label: Order
+        type: number
+        description: "Sort among active / dormant peers"
+      - name: body
+        label: Body
+        type: richtext
