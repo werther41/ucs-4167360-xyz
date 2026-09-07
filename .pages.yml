@@ -1,0 +1,212 @@
+# Pages CMS — https://app.pagescms.org
+# Docs: https://pagescms.org/docs/configuration/
+#
+# Uploads land in src/assets/images. Both collections sit two folders
+# deeper (src/content/logs|projects), so `output` is the relative path
+# Astro writes into Markdown. Images in src/ are optimized at build
+# (Cloudflare adapter imageService: compile). Files in public/ are not.
+
+media:
+  - name: images
+    label: Images
+    input: src/assets/images
+    output: ../../assets/images
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, avif]
+    rename: safe
+    commit:
+      templates:
+        create: "media: add {filename}"
+        update: "media: update {filename}"
+        delete: "media: remove {filename}"
+        rename: "media: rename {oldFilename} -> {newFilename}"
+
+components:
+  tags:
+    type: string
+    list: true
+    label: Tags
+    description: Counted at build. No tag files. Keep them lowercase and short.
+
+content:
+  - name: logs
+    label: Logs
+    type: collection
+    path: src/content/logs
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [title, date, kind, draft]
+      primary: title
+      sort: [date, title]
+      search: [title, summary]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: summary
+        label: Summary
+        type: text
+        required: true
+        description: One line on the logs index. Max 160 characters.
+        options:
+          maxlength: 160
+      - name: tags
+        component: tags
+      - name: project
+        label: Project
+        type: string
+        description: Optional workshop slug — filename without .md (e.g. tide-clock).
+        pattern:
+          regex: "^$|^[a-z0-9-]+$"
+          message: "Use the project filename without .md (lowercase, hyphens)."
+      - name: kind
+        label: Kind
+        type: select
+        default: log
+        description: log = green badge. workshop = magenta. Still a log either way.
+        options:
+          values:
+            - name: log
+              label: log
+            - name: workshop
+              label: workshop
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+        description: Visible in dev, hidden in production.
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+        description: Markdown. ## headings become the CONTENTS rail.
+        options:
+          format: markdown
+          media: images
+          switcher: true
+
+  - name: projects
+    label: Workshop
+    type: collection
+    path: src/content/projects
+    format: yaml-frontmatter
+    subfolders: false
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [name, status, featured, order]
+      primary: name
+      sort: [order, name]
+      search: [name, blurb]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: blurb
+        label: Blurb
+        type: string
+        required: true
+        description: One-liner for cards.
+      - name: status
+        label: Status
+        type: select
+        required: true
+        description: dormant puts it on the archive shelf.
+        options:
+          values:
+            - name: live
+              label: live
+            - name: wip
+              label: wip
+            - name: dormant
+              label: dormant
+      - name: started
+        label: Started
+        type: string
+        required: true
+        description: '"YYYY.MM" or "YYYY".'
+        pattern:
+          regex: "^\\d{4}(\\.\\d{2})?$"
+          message: 'Use "YYYY.MM" or "YYYY".'
+      - name: ended
+        label: Ended
+        type: string
+        description: Optional archive year range (e.g. "2008").
+        pattern:
+          regex: "^$|^\\d{4}(\\.\\d{2})?$"
+          message: 'Use "YYYY.MM" or "YYYY".'
+      - name: stack
+        label: Stack
+        type: string
+        list: true
+      - name: source
+        label: Source
+        type: string
+        description: GitHub URL.
+        pattern:
+          regex: "^$|^https://.+"
+          message: Full URL, including https://.
+      - name: demo
+        label: Demo
+        type: string
+        description: Live URL.
+        pattern:
+          regex: "^$|^https://.+"
+          message: Full URL, including https://.
+      - name: tags
+        component: tags
+      - name: featured
+        label: Featured
+        type: boolean
+        default: false
+        description: Shows on the HUD FEATURED row.
+      - name: order
+        label: Order
+        type: number
+        default: 0
+        description: Sort among active / dormant peers.
+      - name: body
+        label: Body
+        type: rich-text
+        required: true
+        description: Renders on /workshop/[slug].
+        options:
+          format: markdown
+          media: images
+          switcher: true
+
+  - name: site
+    label: Site identity
+    type: file
+    path: src/site.ts
+    format: code
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: add {filename}"
+      update: "content: update {filename}"
+      delete: "content: remove {filename}"
+      rename: "content: rename {oldFilename} -> {newFilename}"

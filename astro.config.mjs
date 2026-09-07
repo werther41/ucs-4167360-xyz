@@ -13,6 +13,13 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "compile",
   }),
+  image: {
+    // Markdown images in src/ (Pages CMS writes relative paths into
+    // src/assets/images) get srcset at build. Article column is 700px.
+    layout: "constrained",
+    breakpoints: [640, 750, 828, 1080],
+    responsiveStyles: false,
+  },
   integrations: [sitemap()],
   markdown: {
     shikiConfig: {
