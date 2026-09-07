@@ -8,7 +8,7 @@ export const site = {
   url: "https://4167360.xyz",
   established: 2002,
   description:
-    "Diagnostics software during the week, small useless web things on the weekend. Notes, half-finished projects, and twenty years of old websites.",
+    "Diagnostics platform software during the week, small useless web things on the weekend. Notes, half-finished projects, and twenty years of old websites.",
 
   /* Shown in the HUD status panel. */
   location: "San Francisco",
