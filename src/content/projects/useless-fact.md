@@ -26,6 +26,8 @@ Started as simple toy project to test new tech stack, ended up become test bed f
 
 As the name suggested, It's useless.
 
+![](../../assets/images/useless-fact/useless-app.png)
+
 ### Core Functionality
 
 - Random Facts: Generate and rate useless facts with persistent voting
