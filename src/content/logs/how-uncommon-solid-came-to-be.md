@@ -1,15 +1,16 @@
 ---
 title: How Uncommon Solid came to be
 date: 2026-09-07
-summary: From a repurposed 2010 MacBook Pro running Debian in a closet to a static Astro site running on the edge.
+summary: From a repurposed 2010 MacBook Pro running Debian in a closet to a
+  static Astro site running on the edge.
 tags:
   - homelab
   - astro
   - cloudflare
 project: uncommon-solid
-kind: log
+kind: workshop
+draft: false
 ---
-
 The site lives at `4167360.xyz`, and it is called Uncommon Solid. Neither of those names was the result of a branding exercise. They are the leftovers of older, unrelated decisions that happened to collide on a Cloudflare domain configuration page.
 
 Here is how a 16-year-old laptop in my closet turned into the website you are reading.
@@ -19,6 +20,7 @@ Here is how a 16-year-old laptop in my closet turned into the website you are re
 It started because I wanted to see if my old 2010 MacBook Pro still worked. It did, but macOS on that machine has been an archaeological artifact for a decade. So I wiped it, installed Debian Linux, and set up CasaOS to handle docker containers and a basic home NAS. 
 
 Now it is a quiet, surprisingly reliable homelab node running a handful of services:
+
 - **Jellyfin** for local media.
 - **CUPS** to keep an ancient printer on life support.
 - **Hermes agent** for running autonomous routines.

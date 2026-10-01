@@ -1,21 +1,26 @@
 ---
 name: Oncology Interpretation
-blurb: Turns a variant call file into something a tumour board can actually read.
+blurb: From CIViCdb RAG queries to Nvidia Parabricks secondary analysis and
+  clinician sign-off workflows.
 status: live
-started: '2024.03'
+started: "2025.01"
 stack:
+  - Nvidia Parabricks
   - React
-  - Rust
-  - DuckDB
-source: https://github.com/handle/oncology-interpretation
-demo: https://onco.4167360.xyz
+  - Node.js
+  - GraphQL
+  - Cloudflare
+source: https://github.com/werther41/onco-query-assistant
+demo: https://onco-query-assistant.vercel.app/
 tags:
   - genomics
   - react
+  - agents
 featured: true
 order: 1
 ---
+What started as a simple RAG experiment to ground hallucinating language models using CIViCdb's GraphQL API has evolved into a comprehensive Case Management system. 
 
-A reading surface for tumour sequencing results. It takes a variant call file, matches it against curated evidence, and lays the whole thing out so a clinician can get to the two or three variants that change a decision.
+It connects patient files, raw NGS data run management, and multi-hour secondary analysis workflows (FQ2BAM, DeepSomatic) with a clinician-focused reporting workspace where variant interpretations are composed, peer-reviewed, and digitally signed.
 
-Most of the work is not the matching. It is the table — sorting, filtering, and knowing what to hide by default.
+The entire stack is deployed on a dedicated local dual-GPU Nvidia Parabricks server ("twin turbo") and served securely via Cloudflare.
