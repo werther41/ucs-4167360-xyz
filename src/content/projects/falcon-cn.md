@@ -75,8 +75,9 @@ Flight-report and score-board *contents* were never captured (the nav proves
 they existed; only the roster list page was archived). BBS threads beyond the
 forum index, and the member edit/verify flows, are also missing. One loose
 end: my 2002 VirtualFly article links to `http://f16-falcon.myrice.com` as
-"CN101中队的网站", but every archived capture of that host shows a 3GO
-squadron site instead — unresolved, kept as a lead in the archive notes.
+"CN101中队的网站", but I don't recognize that host — my squadron sites
+were falconcn.com and cn101tf.com. My guess is someone took the squadron's
+web presence over around 2003, after my time.
 
 Recovered snapshots: `docs/archive-recovery/falcon-cn/` and
 `docs/archive-recovery/cn101tf/`.

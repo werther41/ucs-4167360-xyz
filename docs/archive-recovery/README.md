@@ -36,10 +36,11 @@ and Wayback replay URL.
 - **falconcn.com captures after ~2005 are mostly `robots.txt`** — the domain
   outlived the site. His CMS-era content is 2002–2005.
 - **myrice-link discrepancy**: his 2002 VirtualFly article links to
-  `http://f16-falcon.myrice.com` as "CN101中队的网站", but every archived
-  capture of that host (2001–2005) shows a site titled "3GO空军基地
-  F16-Falcon 战隼大队" — a different squadron. Relationship unclear; kept as
-  a lead, not claimed as his.
+  `http://f16-falcon.myrice.com` as "CN101中队的网站", but he doesn't
+  recognize that host — his squadron sites were falconcn.com and cn101tf.com.
+  Every archived capture of the myrice host (2001–2005) shows a site titled
+  "3GO空军基地 F16-Falcon 战隼大队" instead. His guess: someone
+  took the squadron's web presence over around 2003, after his time.
 - **Privacy**: `falcon-cn/raw/member-list-20030801060711.html` is the 2003
   squadron roster and contains members' 2003-era email addresses. It is
   preserved unmodified as an archived original; do not republish the
