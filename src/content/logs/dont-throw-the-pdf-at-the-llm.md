@@ -1,18 +1,19 @@
 ---
-title: Don't throw the PDF at the LLM
+title: Don't throw the PDF at the LLM - Reflection of this project
 date: 2026-09-30
-summary: A hallucinated variant report led to a CIViCdb-grounded RAG app, a Parabricks server running multi-hour pipelines, and agent skills. Where it goes next.
+summary: A hallucinated variant report led to a CIViCdb-grounded RAG app, a
+  Parabricks server running multi-hour pipelines, and agent skills. Where it
+  goes next.
 tags:
   - genomics
   - ai
 project: oncology-interpretation
-kind: log
+kind: workshop
 draft: false
 ---
+Some context first, because it explains every wrong turn below. I'm a software engineer doing system integration. The company I work for builds turnkey NGS solutions for pathogen detection: sample intake, library prep on a liquid handler, sequencing, data upload to the cloud, and a bio-pipeline that calls out pathogens at the species level. During COVID that meant public health labs tracking SARS-CoV-2 variants. Recently we've pivoted into oncology — same idea, but automating the library prep side at this moment, working with a partner company that owns the assay and the bio-pipeline, and generating basic reports on mutations. My job is connecting the pieces so the whole thing runs hands-free, sample to insights.
 
-Some context first, because it explains every wrong turn below. I'm a software engineer doing system integration. The company I work for builds turnkey NGS solutions for pathogen detection: sample intake, library prep on a liquid handler, sequencing, data upload to the cloud, and a bio-pipeline that calls out pathogens at the species level. During COVID that meant food manufacturers and public health labs tracking SARS-CoV-2 variants. Recently we've pivoted into oncology — same idea, but automating the library prep side, working with a partner company that owns the assay and the bio-pipeline, and generating basic reports on mutations. My job is connecting the pieces so the whole thing runs hands-free, sample to insights.
-
-I am not a bioinformatician. I am not a clinician. Keep that in mind.
+I am not a bioinformatic. I am not a clinician. Keep that in mind.
 
 ## The PDF
 
@@ -24,9 +25,9 @@ It hallucinated. Quite a lot.
 
 ## Ground it
 
-The next logical thought: if the problem is grounding, add retrieval. I went looking at oncology knowledge bases and picked CIViCdb, mostly because it doesn't need a license for proof-of-concept work. I briefly considered downloading their TSV release, but live queries were simpler and always current — so why not just query it directly?
+The next logical thought: if the problem is grounding, add retrieval. I went looking at oncology knowledge bases and picked CIViCDB, mostly because it doesn't need a license for proof-of-concept work. I briefly considered downloading their TSV release, but live queries were simpler and always current — so why not just query it directly?
 
-GraphQL made that almost suspiciously easy. One query returned everything in a hierarchical structure ([here it is](https://github.com/werther41/onco-query-assistant/blob/main/src/lib/civic/queries.ts)). I converted the JSON to Markdown, generated reference links programmatically so every claim pointed back at the CIViCdb website, and let the LLM write the report on top of that. There was a chat window on the side for follow-up questions. The whole thing is at [onco-query-assistant](https://github.com/werther41/onco-query-assistant).
+GraphQL made that almost suspiciously easy. One query returned everything in a hierarchical structure ([here it is](https://github.com/werther41/onco-query-assistant/blob/main/src/lib/civic/queries.ts)). I converted the JSON to Markdown, generated reference links programmatically so every claim pointed back at the CIViCDB website, and let the LLM write the report on top of that. There was a chat window on the side for follow-up questions. The whole thing is at [onco-query-assistant](https://github.com/werther41/onco-query-assistant).
 
 v1 came together in early 2025, and the generated reports looked good.
 
