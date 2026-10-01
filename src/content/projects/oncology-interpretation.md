@@ -11,7 +11,7 @@ stack:
   - GraphQL
   - Cloudflare
 source: https://github.com/werther41/onco-query-assistant
-demo: https://workspace-node-1.clearcloud.ai/
+demo: https://onco-query-assistant.vercel.app/
 tags:
   - genomics
   - react
