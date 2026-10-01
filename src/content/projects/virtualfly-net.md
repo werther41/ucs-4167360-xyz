@@ -66,6 +66,12 @@ One October 2002 article points readers to "CN101中队的网站" at
 `http://f16-falcon.myrice.com` — see the note in the archive README about
 what that host actually shows.
 
+## Screenshots
+
+![VirtualFly.net PHPNuke portal homepage](../../assets/images/virtualfly-net/virtualfly-portal-behance.webp)
+
+*The V2 portal on 591fly.cpgl.net — screenshot from my Behance portfolio.*
+
 ## What didn't survive
 
 The `virtualfly.net` domain itself is long lost and was not checked. Forum

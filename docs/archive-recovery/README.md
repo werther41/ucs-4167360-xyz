@@ -47,8 +47,11 @@ and Wayback replay URL.
   addresses in new copy.
 - **Behance**: both gallery pages returned HTTP 403 to the fetcher and were
   not retried. The intro texts in `meta/behance-notes.md` are Werther's own
-  words, pasted by him verbatim on 2026-10-01. Screenshot image URLs could
-  not be retrieved — the galleries do contain screenshots per his notes.
+  words, pasted by him verbatim on 2026-10-01. He later saved the gallery
+  screenshots himself (2026-10-01); they live at
+  `src/assets/images/falcon-cn/falconcn-homepage-behance.webp` and
+  `src/assets/images/virtualfly-net/virtualfly-portal-behance.webp` and are
+  embedded in the draft project pages.
 - `virtualfly.net` (the original domain) was not checked — long lost, per
   Werther.
 

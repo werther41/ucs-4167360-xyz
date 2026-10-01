@@ -69,6 +69,12 @@ MSN Messenger / MSN Groups.
 unrelated "Buy WoW Gold" site: the domain changed hands and is not part of
 this recovery.
 
+## Screenshots
+
+![Falcon.cn homepage](../../assets/images/falcon-cn/falconcn-homepage-behance.webp)
+
+*The Falcon.cn homepage — screenshot from my Behance portfolio.*
+
 ## What didn't survive
 
 Flight-report and score-board *contents* were never captured (the nav proves
