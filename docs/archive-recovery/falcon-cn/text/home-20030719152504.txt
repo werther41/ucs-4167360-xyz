@@ -1,0 +1,403 @@
+FalconCN | CN101TF Griffin Squadron
+:: Home Base
+:: News
+:: Bulletin Board
+:: Topics
+:: Downloads
+:: WebLinks
+:: CN101TF Griffin Squadron
+:: Roster
+:: Join our squadron
+首页
+|
+主题文章
+|
+下载地带
+|
+相关连接
+|
+中队管理
+|
+中队论坛
+Welcome to
+Falcon
+CN.com
+::
+FreeFalcon1.0a 发布
+FreeFalcon 1.0a是一个FalconSP3三方插件，你只需要下载它，并点击安装就可以更新Falcon中几十种飞机的3D模型和256分辨率的涂装，包括F-16, F/A-18, F-14, Mirage2000, F-111, F-22, C-17, J-11等这些3D模型和涂装都制作的很不错，在舱外视角中你会发现以前一些制作粗糙的飞机外形现在都 ... |
+Read More
+::
+Art of the kill 猎杀艺术
+Pete Bonanni 是一名美国空军资深飞行教官，同时也是Falcon4 官方手册的作者，他编写了许多关于飞行技巧与技术方面的书籍，这本《Art of the Kill》是他所撰写的著名作品之一，队友Eagal566将此书译成了中文。这本传授基本空战机动（BFM）的原理书是作者浓缩了多年飞行和执教现代战机的经验将一些表面上看上去比较模糊和零散的认识，上升到了系统化的理论范畴,在空战理论史上起到了里程碑的作用。相信在你看过这本书以后，你的空战水平会有实质 ... |
+Read More
+::
+ECV56 Condor 发布“Rescap Video
+阿根廷ECV56 Condor中队发布了他们的第二部用FalconSP拍摄的Video，这次是以一次救援行动为题材拍摄的MTV，音乐选用的是Die anther day，快下载下来看看吧，真的很棒！
+Download
+... |
+Read More
+::
+Falcon4.0 快速上手指南
+Falcon4.0是现今世界上公认的最真实的战斗飞行模拟软件，它完全真实并忠臣的从每个方面模拟了美军的F-16
+Falcon 多用途战机，包括真实的气动还原，真实的航电操作，武器操作，战术模拟等，如果你梦想着像一个真正的F-16飞行员那样操作战斗机，并作为一名空军飞行员参与一场实时动态的战役，完成一个又一个极具挑战性的战斗飞行任务，那就来尝试一下吧 ... |
+Read More
+::
+新的F-16 3d mode or 1024图装
+Falcon 已经发布了最新的F-16CG
+3D模型以及配套的高分标率1024材质的图装，新的3D模型有两种机型，分别是单座的F-16c以及双座的F-16d型，并且终于可以实现打开座舱盖以及打开减速伞了。
+你可以用Lod Editor来倒入新的3D mode，中队的Fox已经写好了教程，另外，WW的NL已经做好了可以直接 修改的F4Pitch，感谢他的 ... |
+Read More
+有新消息要提交？
+:: New Articles| 最新更新文章 ::
+□ [
+补丁发布
+]
+FreeFalcon1.0a 发布
+(6-8)
+□ [
+飞行技术
+]
+Art of the kill 猎杀艺术
+(5-31)
+□ [
+Falcon动态
+]
+ECV56 Condor 发布“Rescap Video
+(5-31)
+□ [
+快速开始
+]
+常见问答集
+(4-6)
+□ [
+快速开始
+]
+联机对战说明
+(4-6)
+□ [
+快速开始
+]
+手册阅读向导
+(4-6)
+□ [
+快速开始
+]
+增效补丁与插件
+(4-6)
+□ [
+快速开始
+]
+Falcon4.0完全安装向导
+(4-6)
+□ [
+快速开始
+]
+如何得到游戏
+(4-6)
+□ [
+快速开始
+]
+Falcon4.0 游戏简介
+(4-6)
+More...
+:: New Downloads | 最新下载 ::
+□ [
+Falcon手册
+]
+AN/APG-68雷达使用手册
+(7-5)
+□ [
+真实F-16手册
+]
+RCS-RWR训练程序
+(4-8)
+□ [
+真实F-16手册
+]
+TWS训练程序
+(4-8)
+□ [
+真实F-16手册
+]
+BullseyeTrainer训练程序
+(4-8)
+□ [
+工具下载
+]
+Tacedit2.1任务编辑工具
+(4-8)
+□ [
+工具下载
+]
+Kunsan thunderstorm雷暴天气
+(4-8)
+□ [
+工具下载
+]
+Kunsan heavy rain大雨天气
+(4-8)
+□ [
+工具下载
+]
+Scathered Storm F4Weather附件
+(4-8)
+□ [
+工具下载
+]
+F4Weather1.1天气工具
+(4-8)
+□ [
+工具下载
+]
+武器投放参数计算程序ProAttack
+(4-8)
+More...
+::
+主题文章
+[
+游戏新闻
+]
+Falcon动态
+、
+补丁发布
+、
+战役发布
+[
+游戏赏析
+]
+预览 Preview
+、
+回顾Review
+、
+采访Interview
+[
+飞行学校
+]
+快速开始
+、
+飞行基础
+、
+基本操作
+、
+航电操作
+、
+武器操作
+、
+训练任务
+、
+常见问答FAQ
+...
+[
+战术讨论
+]
+任务简报
+、
+飞行技术
+、
+战术动作
+、
+飞行故事
+、
+讨论精华
+、
+游戏装备
+...
+[
+F-16资料库
+]
+F-16 系列
+、
+航电系统
+、
+武器系统
+[
+CN101中队
+]
+CN101中队
+::
+下载地带
+[
+补丁下载
+]
+补丁Pitch
+、
+座舱Cockpits
+、
+模型Mods
+、
+声音Sounds
+、
+增效Utils
+、
+摇杆设定joysticks
+、
+涂装Skins
+、
+工具下载
+...
+[
+任务下载
+]
+任务Missions
+、
+战役下载 theatres
+[
+手册下载
+]
+Falcon手册
+、
+检查表
+、
+真实F-16手册
+[
+视频下载
+]
+ACMI
+、
+录像
+、
+真实F-16录像
+□
+通知：新的队员注册系统
+□
+FalconCN.com管理中心使用说明
+□
+FalconCN.com站点栏目分类完成
+□
+CN101联队站点页面内容充实中
+□
+FalconCN.com
+More...
+User Name
+Password
+#
+Falcon4
+截图欣赏:
+#
+新手入门 :
+由于Falcon4.0完全真实的操作，复杂的安装过程，繁多的增效补丁与插件，我们为新玩家们撰写了快速上手指南。
+- 游戏简介
+- 如何得到游戏
+- 完全安装向导
+- 增效补丁与插件
+- 手册阅读向导
+- 联机对战说明
+- 常见问答集
+# CN101TF 狮鹫中队
+-
+关于CN101TF
+-
+加入中队
+-
+队员登录
+-
+队员列表
+-
+中队活动
+中队联系方式:
+TS2 [TeamSpeak]
+中队固定TS2通讯频道:
+202.98.20.11
+MSN Messenger
+MSN
+Group
+(后备基地)
+加入中队通讯组:
+MSN
+Groups
+# Members:
+-
+BlueBlood
+-
+Fox
+-
+Helios
+-
+Tom528
+-
+Werther
+-
+Member List...
+你在Falcon4的LogBook中的飞行小时数是多少？
+1-50
+50-200
+200-500
+500-2000
+大于2000
+#
+Articles
+: 55
+#
+Downloads
+: 79
+# Classification : 39
+#  Online :
+13
+□
+3Go中队Flanker2.5
+□
+黄蜂中队Jane's F/A-18
+□
+Fox3 模拟飞行中队
+□
+菜鸟论坛
+□
+军事模拟网
+□
+Chn Ace IL-2
+□
+绿心联队 IL-2
+□
+飞行游戏网
+Quick Links
+□
+F4 Freeware
+□
+Falcon4 HQ
+□
+Falcon UK
+□
+PMC TFW
+□
+F4 Unified Team
+□
+F4 Community
+□
+Falcon5
+□
+Frugals World
+□
+SimHQ
+□
+DogFighter.com
+□
+BiohazCentra
+□
+The Wargamer
+□
+CFSO
+Link to us
+::
+关于本站
+|
+联系方式
+|
+隐私保护
+|
+版权说明
+|
+网站地图
+::
+Top
+::
+Falcon
+CN
+.com™
+Falcon4 Chinese Support Center | CN101TF Griffin Squadron
+Copyright 2002 FalconCN.com All rights reserved
+Designed by
+Werther-041
+Administration
+CP
+|
+Home

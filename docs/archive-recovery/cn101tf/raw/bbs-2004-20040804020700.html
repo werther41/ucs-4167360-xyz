@@ -1,0 +1,570 @@
+<html><!--
+=================================================
+=	(c)Copyright 2001 RICK			=
+=	Design		: Rick			=
+=	Programer	: Rick			=
+=	HomePage	: EzRick.COM		=
+=	ForumPage	: BBS.EzRick.COM	=
+=			: Forum.EzRick.COM	=
+=	Oicq		: 1817312		=
+=	Email		: Mail@EzRick.COM	=
+=================================================
+--><head><title>FalconCN.com BBS</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312"><meta http-equiv=refresh content="300"><style type="text/css">
+
+a:visited {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+}
+a:link {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	color: #333333;
+	text-decoration: none;
+}
+a:hover {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	color: #6699CC;
+	text-decoration: none;
+}
+
+td,p,body {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	color: #333333;
+	table-layout:fixed;
+	word-break:break-all;
+	}
+
+.Tips_bo {
+	font-size: 11px;
+background-color: #c5c5c5; 	color: #333333;
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	text-decoration: none;
+	background-color: #CCCCCC;
+	border-top: 1px outset #333333;
+	border-right: 1px outset #eaeaea;
+	border-bottom: 1px outset #eaeaea;
+	border-left: 1px outset #333333;
+}
+.bk {
+	color: #333333;
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	background-color: #FFFFFF;
+	border: 1px inset #666666;
+
+}
+.bk1
+{
+	padding-left: 4;
+	padding-right: 4;
+	padding-top: 1;
+	padding-bottom: 1;
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	color: #333333;
+	background-color: #FFFFFF;
+	border: 1 inset #333333;
+
+}
+.bk2
+{
+	color: #333333;
+	padding-left: 4;
+	padding-right: 4;
+	padding-top: 1;
+	padding-bottom: 1;
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	background-color: #FFFFFF;
+	border: 1 inset #333333;
+
+}
+
+BODY   {
+	SCROLLBAR-HIGHLIGHT-COLOR: #c5c5c5;
+ 	SCROLLBAR-SHADOW-COLOR: #c5c5c5;
+ 	SCROLLBAR-3DLIGHT-COLOR: #eaeaea;
+ 	SCROLLBAR-TRACK-COLOR: #c5c5c5;
+ 	SCROLLBAR-DARKSHADOW-COLOR: #eaeaea;
+	scrollbar-arrow-color:#c5c5c5;
+      scrollbar-face-color:#ffffff
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	color: #333333;
+     	}
+.q {
+	BORDER-RIGHT: #ffffff 0px solid; BORDER-TOP: #ffffff 0px solid; BORDER-LEFT: #ffffff 0px solid;
+background-color: #ffffff
+; 	border: 1px inset #666666;
+}
+.jnfont6 {
+	FONT-SIZE: 11px;
+	font-weight: bold;
+	color: #333333;
+}
+.inputlog {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 11px;
+	color: #000000;
+	background-color: #ffffff;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: inset;
+	border-right-style: inset;
+	border-bottom-style: inset;
+	border-left-style: inset;
+	border-top-color: #555555;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #555555;
+}
+.inputBt {
+	font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #555555;
+	background-color: #FFFFFF;
+	font-weight: bolder;
+	border-top: 1px outset #555555;
+	border-right: 2px outset #000000;
+	border-bottom: 2px outset #000000;
+	border-left: 1px outset #555555;
+
+
+}
+
+</style>
+<script>
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function JM_cc(name){
+var obj=MM_findObj(name); if (obj) {
+	obj.select();
+	js=obj.createTextRange();
+	js.execCommand("Copy");
+	}
+}
+function runEx(name){
+	var obj=MM_findObj(name);
+	var winEx = window.open("#", "winEx"); 	winEx.document.open("text/html", "replace");
+	winEx.document.write(unescape(obj.value));
+	//winEx.document.close();
+}
+
+function checkclick(msg){
+if(confirm(msg)){
+event.returnValue=true;
+}else{
+event.returnValue=false;
+}
+}
+
+function CheckAll(form)
+  {
+  for (var i=0;i<form.elements.length;i++)
+    {
+    var e = form.elements[i];
+    if (e.name != 'chkall')
+       e.checked = form.chkall.checked;
+    }
+  }
+
+function a(){
+el=event.srcElement
+if (el.tagName=='A') el.target=(globalTarget.value)
+}
+  
+var currentpos,timer;  
+function initialize() 
+{timer=setInterval("scrollwindow()",1);}
+
+function sc(){clearInterval(timer);}
+
+function scrollwindow() 
+{currentpos=document.body.scrollTop; window.scroll(0,++currentpos); 
+
+if (currentpos != document.body.scrollTop) sc();} 
+
+document.onmousedown=sc;
+document.ondblclick=initialize;
+
+</script>
+<script>
+//***********默认设置定义.*********************
+tPopWait=50;//停留tWait豪秒后显示提示。
+tPopShow=5000;//显示tShow豪秒后关闭提示
+showPopStep=20;
+popOpacity=99;
+
+//***************内部变量定义*****************
+sPop=null;
+curShow=null;
+tFadeOut=null;
+tFadeIn=null;
+tFadeWaiting=null;
+
+document.write("<style type='text/css'id='defaultPopStyle'>");
+document.write(".cPopText {  background-color: #eaeaea; border: 1px #000000 solid;font-color: font-size: 12px; padding-right: 4px; padding-left: 4px; height: 20px; padding-top: 2px; padding-bottom: 2px; filter: Alpha(Opacity=0)}");
+document.write("</style>");
+document.write("<div id='dypopLayer' style='position:absolute;z-index:1000;' class='cPopText'></div>");
+
+
+function showPopupText(){
+var o=event.srcElement;
+	MouseX=event.x;
+	MouseY=event.y;
+	if(o.alt!=null && o.alt!=""){o.dypop=o.alt;o.alt=""};
+        if(o.title!=null && o.title!=""){o.dypop=o.title;o.title=""};
+	if(o.dypop!=sPop) {
+			sPop=o.dypop;
+			clearTimeout(curShow);
+			clearTimeout(tFadeOut);
+			clearTimeout(tFadeIn);
+			clearTimeout(tFadeWaiting);	
+			if(sPop==null || sPop=="") {
+				dypopLayer.innerHTML="";
+				dypopLayer.style.filter="Alpha()";
+				dypopLayer.filters.Alpha.opacity=0;	
+				}
+			else {
+				if(o.dyclass!=null) popStyle=o.dyclass 
+					else popStyle="cPopText";
+				curShow=setTimeout("showIt()",tPopWait);
+			}
+			
+	}
+}
+
+function showIt(){
+		dypopLayer.className=popStyle;
+		dypopLayer.innerHTML=sPop;
+		popWidth=dypopLayer.clientWidth;
+		popHeight=dypopLayer.clientHeight;
+		if(MouseX+12+popWidth>document.body.clientWidth) popLeftAdjust=-popWidth-24
+			else popLeftAdjust=0;
+		if(MouseY+12+popHeight>document.body.clientHeight) popTopAdjust=-popHeight-24
+			else popTopAdjust=0;
+		dypopLayer.style.left=MouseX+12+document.body.scrollLeft+popLeftAdjust;
+		dypopLayer.style.top=MouseY+12+document.body.scrollTop+popTopAdjust;
+		dypopLayer.style.filter="Alpha(Opacity=0)";
+		fadeOut();
+}
+
+function fadeOut(){
+	if(dypopLayer.filters.Alpha.opacity<popOpacity) {
+		dypopLayer.filters.Alpha.opacity+=showPopStep;
+		tFadeOut=setTimeout("fadeOut()",1);
+		}
+		else {
+			dypopLayer.filters.Alpha.opacity=popOpacity;
+			tFadeWaiting=setTimeout("fadeIn()",tPopShow);
+			}
+}
+
+function fadeIn(){
+	if(dypopLayer.filters.Alpha.opacity>0) {
+		dypopLayer.filters.Alpha.opacity-=1;
+		tFadeIn=setTimeout("fadeIn()",1);
+		}
+}
+document.onmouseover=showPopupText;
+</script>
+</head><body bgcolor='#E5E5E5' text='#000066' leftmargin='0' topmargin='0' marginwidth='0' marginheight='0' background='img/bg.gif'><br> 
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td width="36%" valign="top"><img src="IMG/CN101TFBBS.gif" width="260" height="100"></td>
+    <td width="64%" valign="top"><img src="IMG/cockpitf.jpg" align="right"><br>
+      <br>
+      <table width="480" border="0" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+        <tr>
+          <td align="center" bgcolor="#f0f0f0"><strong><font color="#6699CC">Falcon</font>CN.com</strong> 
+            网站导航: <a href="../index.asp">首页</a> | <a href="../fir.asp?o=1">主题文章</a> 
+            | <a href="../fir.asp?o=2">游戏下载</a> | <strong><a href="INDEX.ASP">中队论坛</a></strong> 
+            | 在线 : 3 人<br> <br> 
+            『 <a href=/bbs/newuser.asp>点这儿注册</a> | <a href=/bbs/userlogin.asp?forum_id=0>用户登陆</a> | <a href=/bbs/search_forum.asp>搜索</a> | <A HREF=/bbs/faq.asp>帮助</A> 』
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="7"><tr><td>
+</td></tr></table>
+
+
+
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="2" align='center'><tr><td width="20" valign="middle"><img src="img/announce.gif"></td><td width="*" valign="middle"><b><a href=viewboard.asp?forum_id=0>Welcome to the ultimate hardcore simulations world!</a></b></td><td width="300" align="right"><img src="img/top1.gif"><a href="userlist.asp?by=F_count%2Bf_r_count&order=desc" target="_blank" alt=你发的贴子多吗>发贴排行</a> <img src="img/top2.gif" alt=看看你排老几啦><a href="userlist.asp?by=exp%2BF_count%2Bf_r_count&order=desc" target="_blank">积分排行</a> <img src="img/userlist1.gif" alt=论坛所有用户的资料><a href="userlist.asp?by=reg_time&order=desc" target="_blank">用户列表</a> <img src="img/yy.gif" alt=查看今天更新的帖子><a href=forumday.asp target="_blank">查看新贴</a></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr bgcolor="#c5c5c5"><td width="1" bgcolor="#999999"></td><td><b>&nbsp;&nbsp;--==&lt;快速登录入口&gt;==--</b>&nbsp;&nbsp;&nbsp;&nbsp;[<a href="newuser.asp">用户注册</a>] [<a href="getpws.asp">忘记密码</a>]</td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr height="30"><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/login.gif" alt="::快速登陆::"></td><td width="1" bgcolor="#999999" align="center"></td><form name="Login" method="post" action="userlogin.asp"><td width=* bgcolor="#ffffff" valign="middle"> &nbsp;用户名: <input type="text" name="username" size="10" maxlength="16" class="inputlog" onMouseOver="this.focus()" onFocus="this.select()">&nbsp;&nbsp;&nbsp;&nbsp;密码: <input type="password" name="password" size="10" maxlength="16" class="inputlog" onMouseOver="this.focus()" onFocus="this.select()">&nbsp;&nbsp;<input type="hidden" name="Cookies_Time" value="1">
+        <input type="hidden" name="IsLogin" value="True">&nbsp;&nbsp;&nbsp;&nbsp; <input name="Submit" type="submit" class="inputBt" style="color: #000000; background-color: #f3f3f3; border-style: solid; border-width: 1" onMouseOver ="this.style.backgroundColor='#ffffff'" onMouseOut ="this.style.backgroundColor='#f3f3f3'" value="登 陆"></td></form><td width=1 bgcolor="#999999" valign="middle"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr><td bgcolor="#999999" align="center" width="1"></td><td bgcolor="#eaeaea" align="center" width="*"><b>论坛</b></td><td bgcolor="#999999" align="center" width="1"></td><td width="45" bgcolor="#eaeaea" align="center"><b>主题</b></td><td width="1" bgcolor="#999999" align="center"></td><td width="45" bgcolor="#eaeaea" align="center"><b>回复</b></td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#eaeaea" align="center"><b>最后发表</b></td><td width="1" bgcolor="#999999" align="center"></td><td width="100" bgcolor="#eaeaea" align="center"><b>版主</b></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#eaeaea" align="center"><b>收藏</b></td><td width="1" bgcolor="#999999" align="center"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr bgcolor="#c5c5c5"><td width="1" bgcolor="#999999"></td><td>&nbsp;&nbsp;<img src=img/cat1.gif border=0>&nbsp;<a href="flist.asp?cat_ID=9"><b><font color="#666666">CN101 TFS</font></b></a></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=2">
+飞行员俱乐部</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=2"><IMG width=12 height=13 alt="在<font color=red>「飞行员俱乐部」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=2"><IMG  alt="在<font color=red>「飞行员俱乐部」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「飞行员俱乐部」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>Flying over No-combat-zone, Fire at Will?</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">1160</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">6069</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3362" title=' 我爱F-16,爱的不能再爱了，太帅了简直！'>回复:很熟悉的图片...</a><br>最后发表:<a href='viewuser.asp?un=whitewolf' target='_blank' title='查看whitewolf的个人信息'>whitewolf</a><br>2004-8-4 9:46:30<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=BlueBlood' target='_blank' title='查看BlueBlood的个人信息'>BlueBlood</a><br><a href='viewuser.asp?un=Helios|1205' target='_blank' title='查看Helios|1205的个人信息'>Helios|1205</a><br><a href='viewuser.asp?un=yui' target='_blank' title='查看yui的个人信息'>yui</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=2', '飞行员俱乐部')"><img src="img/fav_add.gif" border="0" alt='将飞行员俱乐部添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=3">
+CN101狮鹫中队队务区</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=3"><IMG width=12 height=13 alt="在<font color=red>「CN101狮鹫中队队务区」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=3"><IMG  alt="在<font color=red>「CN101狮鹫中队队务区」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「CN101狮鹫中队队务区」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>101战术战斗机中队内部事务论坛</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">101</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">527</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td>你没有权限进入该论坛  <a href=/bbs/index.asp>返回</a></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=BlueBlood' target='_blank' title='查看BlueBlood的个人信息'>BlueBlood</a><br><a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息'>GhostRider</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=3', 'CN101狮鹫中队队务区')"><img src="img/fav_add.gif" border="0" alt='将CN101狮鹫中队队务区添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr bgcolor="#c5c5c5"><td width="1" bgcolor="#999999"></td><td>&nbsp;&nbsp;<img src=img/cat1.gif border=0>&nbsp;<a href="flist.asp?cat_ID=1"><b><font color="#666666">Falcon 4.0,the king of air combat simulations.</font></b></a></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=1">
+Falcon 4.0</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=1"><IMG width=12 height=13 alt="在<font color=red>「Falcon 4.0」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=1"><IMG  alt="在<font color=red>「Falcon 4.0」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「Falcon 4.0」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>Falcon 4 SP及其相关软硬件综合讨论区。</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">946</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">5018</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3334" title='大概天热，晒的吧？ :-D'>回复:装了FF3的MOD...</a><br>最后发表:<a href='viewuser.asp?un=ssbbhh' target='_blank' title='查看ssbbhh的个人信息'>ssbbhh</a><br>2004-8-4 0:43:37<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息'>GhostRider</a><br><a href='viewuser.asp?un=BlueBlood' target='_blank' title='查看BlueBlood的个人信息'>BlueBlood</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=1', 'Falcon 4.0')"><img src="img/fav_add.gif" border="0" alt='将Falcon 4.0添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=14">
+Fighter Ops</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=14"><IMG width=12 height=13 alt="在<font color=red>「Fighter Ops」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=14"><IMG  alt="在<font color=red>「Fighter Ops」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「Fighter Ops」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>即将推出的G2Interactive最新军机模拟 - <b>Fighter Ops</b> 讨论区<br> - Next Generation in Flight sim technology</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">13</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">61</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3194" title='何时发布'>回复:Fighter Ops ...</a><br>最后发表:<a href='viewuser.asp?un=flyfox8988' target='_blank' title='查看flyfox8988的个人信息'>flyfox8988</a><br>2004-7-31 21:12:29<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=James527' target='_blank' title='查看James527的个人信息'>James527</a><br><a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息'>GhostRider</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=14', 'Fighter Ops')"><img src="img/fav_add.gif" border="0" alt='将Fighter Ops添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=5">
+战斗机武器学校 </a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=5"><IMG width=12 height=13 alt="在<font color=red>「战斗机武器学校 」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=5"><IMG  alt="在<font color=red>「战斗机武器学校 」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「战斗机武器学校 」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>The Fighter Weapons School，Falcon4模拟系统的全面研究和进阶，中高级技术学习，打造中国Falcon精英的工厂。</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">264</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">1537</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3328" title='我一直不想参与这种类型的讨论，因为空谈实...'>回复:新手问题</a><br>最后发表:<a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息'>GhostRider</a><br>2004-8-4 10:03:23<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息'>GhostRider</a><br><a href='viewuser.asp?un=Helios|1205' target='_blank' title='查看Helios|1205的个人信息'>Helios|1205</a><br><a href='viewuser.asp?un=tom528' target='_blank' title='查看tom528的个人信息'>tom528</a><br><a href='viewuser.asp?un=James527' target='_blank' title='查看James527的个人信息'>James527</a><br>more...</td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=5', '战斗机武器学校 ')"><img src="img/fav_add.gif" border="0" alt='将战斗机武器学校 添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=10">
+空战中心/RED FLAG</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=10"><IMG width=12 height=13 alt="在<font color=red>「空战中心/RED FLAG」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=10"><IMG  alt="在<font color=red>「空战中心/RED FLAG」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「空战中心/RED FLAG」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>The Air Warfare Center，F4每周联机任务、战术演习布置专区，专署任务的人员及目标分配工作。</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">9</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">12</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td>你没有权限进入该论坛  <a href=/bbs/index.asp>返回</a></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=BlueBlood' target='_blank' title='查看BlueBlood的个人信息'>BlueBlood</a><br><a href='viewuser.asp?un=Helios|1205' target='_blank' title='查看Helios|1205的个人信息'>Helios|1205</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=10', '空战中心/RED FLAG')"><img src="img/fav_add.gif" border="0" alt='将空战中心/RED FLAG添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=7">
+中队下载专区</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=7"><IMG width=12 height=13 alt="在<font color=red>「中队下载专区」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=7"><IMG  alt="在<font color=red>「中队下载专区」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「中队下载专区」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>关于Falcon4及其相关补丁、插件、视频、文档等等的下载</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">399</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">1402</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td>你没有权限进入该论坛  <a href=/bbs/index.asp>返回</a></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息'>GhostRider</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=7', '中队下载专区')"><img src="img/fav_add.gif" border="0" alt='将中队下载专区添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr bgcolor="#c5c5c5"><td width="1" bgcolor="#999999"></td><td>&nbsp;&nbsp;<img src=img/cat1.gif border=0>&nbsp;<a href="flist.asp?cat_ID=3"><b><font color="#666666">Janes F/A-18 & Janes F-15 </font></b></a></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=9">
+海侧卫的F/A-18飞行论坛</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=9"><IMG width=12 height=13 alt="在<font color=red>「海侧卫的F/A-18飞行论坛」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=9"><IMG  alt="在<font color=red>「海侧卫的F/A-18飞行论坛」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「海侧卫的F/A-18飞行论坛」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>海侧卫的F/A-18飞行论坛，主要讨论Janes F/A-18.</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">206</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">1434</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=2505" title='woshinipengyou@hotmail.com'>回复:各位来这里留...</a><br>最后发表:<a href='viewuser.asp?un=woshinlb' target='_blank' title='查看woshinlb的个人信息'>woshinlb</a><br>2004-8-4 9:41:41<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=海侧卫' target='_blank' title='查看海侧卫的个人信息'>海侧卫</a><br><a href='viewuser.asp?un=yui' target='_blank' title='查看yui的个人信息'>yui</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=9', '海侧卫的F/A-18飞行论坛')"><img src="img/fav_add.gif" border="0" alt='将海侧卫的F/A-18飞行论坛添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr bgcolor="#c5c5c5"><td width="1" bgcolor="#999999"></td><td>&nbsp;&nbsp;<img src=img/cat1.gif border=0>&nbsp;<a href="flist.asp?cat_ID=11"><b><font color="#666666">MS Flight Simulations</font></b></a></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=18">
+FS2004/FS2002</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=18"><IMG width=12 height=13 alt="在<font color=red>「FS2004/FS2002」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=18"><IMG  alt="在<font color=red>「FS2004/FS2002」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「FS2004/FS2002」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>FS2004/FS2002讨论，资源插件共享专区</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">2</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">0</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3352" title='简单交流一下啊'>大家除了飞F4，还...</a><br>最后发表:<a href='viewuser.asp?un=猛禽' target='_blank' title='查看猛禽的个人信息'>猛禽</a><br>2004-8-3 22:32:06<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=Helios|1205' target='_blank' title='查看Helios|1205的个人信息'>Helios|1205</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=18', 'FS2004/FS2002')"><img src="img/fav_add.gif" border="0" alt='将FS2004/FS2002添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr bgcolor="#c5c5c5"><td width="1" bgcolor="#999999"></td><td>&nbsp;&nbsp;<img src=img/cat1.gif border=0>&nbsp;<a href="flist.asp?cat_ID=8"><b><font color="#666666">Combat Helo Simulations</font></b></a></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=11">
+直升机模拟游戏飞行论坛</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=11"><IMG width=12 height=13 alt="在<font color=red>「直升机模拟游戏飞行论坛」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=11"><IMG  alt="在<font color=red>「直升机模拟游戏飞行论坛」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「直升机模拟游戏飞行论坛」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>Long Bow 2和Enemy Engaged:Comanche Hokum等直升机模拟游戏讨论区</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">57</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">236</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3002" title='EEAH已刪檔了，EECH還在&quot;即將刪除&quot;的目錄內...'>回复:EECH光盘版上...</a><br>最后发表:<a href='viewuser.asp?un=andy188' target='_blank' title='查看andy188的个人信息'>andy188</a><br>2004-7-31 19:18:15<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=爱飞的小子' target='_blank' title='查看爱飞的小子的个人信息'>爱飞的小子</a><br><a href='viewuser.asp?un=Eagle566' target='_blank' title='查看Eagle566的个人信息'>Eagle566</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=11', '直升机模拟游戏飞行论坛')"><img src="img/fav_add.gif" border="0" alt='将直升机模拟游戏飞行论坛添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' height="25"><tr bgcolor="#c5c5c5"><td width="1" bgcolor="#999999"></td><td>&nbsp;&nbsp;<img src=img/cat1.gif border=0>&nbsp;<a href="flist.asp?cat_ID=10"><b><font color="#666666">Strike Fighters & other Jetsims</font></b></a></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=19">
+Jet Thunder</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=19"><IMG width=12 height=13 alt="在<font color=red>「Jet Thunder」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=19"><IMG  alt="在<font color=red>「Jet Thunder」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「Jet Thunder」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>喷气雷鸣-制作中的模拟马岛战争的空战游戏，预计年底上市</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">4</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">6</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3357" title='飞起来给你一脚
+'>回复:Some new pic...</a><br>最后发表:<a href='viewuser.asp?un=chinabank' target='_blank' title='查看chinabank的个人信息'>chinabank</a><br>2004-8-2 0:17:47<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=McWolf' target='_blank' title='查看McWolf的个人信息'>McWolf</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=19', 'Jet Thunder')"><img src="img/fav_add.gif" border="0" alt='将Jet Thunder添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" bgcolor="#999999" align="center"></td><td width="50" bgcolor="#ffffff" align="center"><img src="img/forum.gif" name="forumstats"></td><td width="1" bgcolor="#999999" align="center"></td><td width=* bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td class=jnfont6>
+
+<a href="forum.asp?Forum_ID=15">
+Strike Fighters: Project-1</a>   </td>
+   <td align=right>
+     <A href="newtopic.asp?Forum_ID=15"><IMG width=12 height=13 alt="在<font color=red>「Strike Fighters: Project-1」</font>发表一个新帖子" src="img/fabiao.gif"  border=0></A> 
+<A href="newvote.asp?Forum_ID=15"><IMG  alt="在<font color=red>「Strike Fighters: Project-1」</font>发起一个新投票"  src="img/toupiao.gif" width=12 height=13 border=0></A> 
+<A href="search_forum.asp"><IMG  alt="在<font color=red>「Strike Fighters: Project-1」</font>查找我要的文章"  src="img/cz.gif" width=12 height=13 border=0></A>
+    </td>
+    </tr>
+ <tr><td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width=*>SFP1攻击战机讨论区</td></tr></table></td></tr></table></td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#ffffff" align="center" valign="middle">2</td><td width=1 bgcolor="#999999" valign="middle"></td><td width="45" bgcolor="#eaeaea" align="center" valign="middle">0</td><td width="1" bgcolor="#999999" align="center"></td><td width="160" bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="6"><tr><td><img src="img/lastpost.gif" alt="访问最后的帖子" border="0" align="absmiddle"> <a href="showtopic.asp?TOPIC_ID=3354" title='回下贴，我看看有多少...'>现在有没有想玩SF...</a><br>最后发表:<a href='viewuser.asp?un=猛禽' target='_blank' title='查看猛禽的个人信息'>猛禽</a><br>2004-7-31 14:41:27<script language='JavaScript'>document.images.forumstats.src='img/forumnew.gif'</script></td></tr></table></td><td width="1" bgcolor="#999999"></td><td width="100" bgcolor="#eaeaea" align="center"><a href='viewuser.asp?un=McWolf' target='_blank' title='查看McWolf的个人信息'>McWolf</a><br><a href='viewuser.asp?un=猛禽' target='_blank' title='查看猛禽的个人信息'>猛禽</a><br></td><td width="1" bgcolor="#999999"></td><td width="40" bgcolor="#ffffff" valign="middle" align="center"><span style="CURSOR: hand" onClick="window.external.AddFavorite('http://www.cn101tf.com/bbs/forum.asp?Forum_ID=15', 'Strike Fighters: Project-1')"><img src="img/fav_add.gif" border="0" alt='将Strike Fighters: Project-1添加到收藏夹'></span></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><td height="1"></td></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr valign="top"><td width="1" bgcolor="#999999"></td><td bgcolor="#c5c5c5"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td><b>--==&lt;论坛统计&gt;==--</b></td></tr></table></td><td bgcolor="#999999" width="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr valign="top"><td width="1" align="center" bgcolor="#999999"></td><td width="45" align="center" bgcolor="#ffffff" valign="middle"><img src="img/online1.gif" ></td><td width="1" align="center" bgcolor="#999999"></td><td bgcolor="#eaeaea" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td height="17">
+- 共有<b>1541</b>名会员 | 最新加盟:<a href=viewuser.asp?un=ssbbhh target=_blank>ssbbhh</a> -  今日新贴<b>0</b>篇 | 更新<b>9</b>篇 | 共有<b>3210</b>篇主题 |<b> 16425</b>篇回复 -
+<BR>
+ | 积分排行 | <BR>
+ <a href='viewuser.asp?un=Helios|1205' target='_blank' title='查看Helios|1205的个人信息'>Helios|1205</a>(12590) <a href='viewuser.asp?un=werther' target='_blank' title='查看werther的个人信息'>werther</a>(4703) <a href='viewuser.asp?un=James527' target='_blank' title='查看James527的个人信息'>James527</a>(4142) <a href='viewuser.asp?un=yui' target='_blank' title='查看yui的个人信息'>yui</a>(2794) <a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息'>GhostRider</a>(2408) <a href='viewuser.asp?un=wew2' target='_blank' title='查看wew2的个人信息'>wew2</a>(2077) <a href='viewuser.asp?un=tom528' target='_blank' title='查看tom528的个人信息'>tom528</a>(1964) <a href='viewuser.asp?un=BlueBlood' target='_blank' title='查看BlueBlood的个人信息'>BlueBlood</a>(1880) <a href='viewuser.asp?un=ACTG' target='_blank' title='查看ACTG的个人信息'>ACTG</a>(1804) <a href='viewuser.asp?un=猛禽' target='_blank' title='查看猛禽的个人信息'>猛禽</a>(1226)</td></tr><tr><td>撒开脚丫子满头大汗拼命追赶中的替补队员 <a href='viewuser.asp?un=whitewolf' target='_blank' title='查看whitewolf的个人信息'>whitewolf</a>(1104) <a href='viewuser.asp?un=bilyh' target='_blank' title='查看bilyh的个人信息'>bilyh</a>(958) <a href='viewuser.asp?un=awoo' target='_blank' title='查看awoo的个人信息'>awoo</a>(886) <a href='viewuser.asp?un=fox' target='_blank' title='查看fox的个人信息'>fox</a>(680) <a href='viewuser.asp?un=chinabank' target='_blank' title='查看chinabank的个人信息'>chinabank</a>(645)
+<BR>
+
+</td></tr></table>
+</td><td bgcolor="#999999" width="1"></td></tr></table>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr valign="top"><td width="1" bgcolor="#999999"></td><td width="*" bgcolor="#c5c5c5"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td><b>--==&lt;个人状态&gt;==--</b></td></tr></table></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr><td width="1" align="center" bgcolor="#999999"></td><td width="45" align="center" bgcolor="#ffffff" valign="middle"><img src="img/online.gif"></td><td width="1" align="center" bgcolor="#999999"></td><td bgcolor="#ffffff"><table width="100%" border="0" cellspacing="0" cellpadding="4">
+<tr><td>
+
+您还没有登陆，只有登陆用户才能查看短消息，并有发表文章的权限。      
+
+<br>您的IP是:209.237.238.181,操作系统：未知，浏 览 器：未知
+</td></tr></table></td><td bgcolor="#999999" width="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr valign="top"><td width="1" bgcolor="#999999"></td><td width="*" bgcolor="#c5c5c5"><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr>
+          <td><b><font color="#666666">--==&lt;在线用户&gt;==--</font></b> [<a href="?Forum_ID=&cat_ID=&userlist=y"> 
+              关闭用户列表
+              </a>] 
+          </td>
+          <td> <p align="right"><font color="#666666"><b><img border="0" src="img/badmin.gif"></b>管理员‖<img border="0" src="img/bad.gif" >版主‖<img border="0" src="img/messages.gif" >注册会员‖<b><img src="img/messages2.gif"  border=0></b>游客</font> </td></tr></table></td><td width="1" bgcolor="#999999"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table>
+
+          
+<table width="95%" border="0" cellspacing="0" cellpadding="0" align='center' align="center">
+  <tr><td width="1" align="center" bgcolor="#999999"></td><td width="45" align="center" bgcolor="#ffffff" valign="middle"><img src="img/online.gif"></td><td width="1" align="center" bgcolor="#999999"></td><td bgcolor="#eaeaea">
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr> 
+          <td>目前论坛上总共有3人在线，其中注册会员2人，访客1人。 
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href=shortmessage.asp?isShow=true&touser=GhostRider target='_blank'><img src='img/badmin.gif' border='0' align='absmiddle' alt='给GhostRider发短消息'></a><a href='viewuser.asp?un=GhostRider' target='_blank' title='查看GhostRider的个人信息
+上次访问：2004-8-4 10:03:23
+ＩＰ地址：已设置保密 目前正在：战斗机武器学校 '>GhostRider</a> &nbsp;<a href=shortmessage.asp?isShow=true&touser=woshinlb target='_blank'><img src='img/messages.gif' border='0' align='absmiddle' alt='给woshinlb发短消息'></a><a href='viewuser.asp?un=woshinlb' target='_blank' title='查看woshinlb的个人信息
+上次访问：2004-8-4 10:02:40
+ＩＰ地址：已设置保密 目前正在：论坛首页'>woshinlb</a> &nbsp;<img src='img/messages2.gif' width='12' height='11' border='0' align='absmiddle'> <a href='#' title='察看游客的个人信息
+上次访问：2004-8-4 10:04:38
+ＩＰ地址：已设置保密 目前正在：论坛首页
+操作系统：未知
+浏 览 器：未知'><font color='#0000FF'>游客　</font></a><img src='img/messages2.gif' width='12' height='11' border='0' align='absmiddle'> <a href='#' title='察看游客的个人信息
+上次访问：2004-8-4 10:04:03
+ＩＰ地址：已设置保密 目前正在：论坛首页
+操作系统：Windows XP
+浏 览 器：Internet Explorer 6.0'>游客　</a>
+          </td>
+        </tr>
+      </table>
+    </td><td bgcolor="#999999" width="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" align='center'><tr valign="top"><td colspan="2" bgcolor="#c5c5c5"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="1" bgcolor="#999999"></td><td width=*><table width="100%" border="0" cellspacing="0" cellpadding="4"><tr><td><b><font color="#666666">--==&lt;联盟论坛&gt;==--</font></b></td></tr></table></td><td width="1" bgcolor="#999999"></td></tr></table></td></tr></table><table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td height="1"></td></tr></table>
+<table width="95%" border="0" cellpadding="0" cellspacing="0" align='center'><tr bgcolor="#ffffff"><td width="1" align="center" valign="middle" bgcolor="#999999"></td><td width="45" height="35" align="center" valign="middle"><img src="img/allyforum.gif"></td><td width="1" align="center" valign="middle" bgcolor="#999999"></td><td>
+      <table border="0" cellspacing="0" cellpadding="4"><tr>
+
+           <td width="14%"><a href="http://www.simhq.com/cgi-bin/ultimatebb.cgi" target="_blank" title="全球最大的军事飞行模拟游戏综合网站SimHQ.COM">SimHQ论坛</a></td>
+
+           <td width="14%"><a href="http://forum.biohazcentral.com/" target="_blank" title="军事飞行模拟综合网站BiohazCentral的论坛">BiohazCentral论坛</a></td>
+
+           <td width="14%"><a href="http://forums.frugalsworld.com/vbb/" target="_blank" title="综合网站FrugalWorld上的F4SuperPAK官方论坛，最著名的F4论坛">F4UT论坛</a></td>
+
+           <td width="14%"><a href="http://www.f4community.com/forum/index.php?PHPSESSID=c6bbc4af8a1aa8c0b7e2d629fe340636" target="_blank" title="Falcon Community论坛">F4Community论坛</a></td>
+
+           <td width="14%"><a href="http://www.freefalcon.com/forum/index.php" target="_blank" title="FreeFalcon官方论坛">FreeFalcon论坛</a></td>
+
+           <td width="14%"><a href="http://www.f4hq.com/forums/index.php?act=idx" target="_blank" title="F4HQ.com论坛">F4HQ.com论坛</a></td>
+
+           <td width="14%"><a href="http://fighterops.com/forum/" target="_blank" title="下一代作品ACC:Fighter OPS官方论坛">Fighter OPS官方论坛</a></td>
+
+           <tr>
+           
+           <td width="14%"><a href="http://fox3.idv.tw/" target="_blank" title="台湾fox3模拟飞行中队">Fox3飞行中队</a></td>
+
+           <td width="14%"><a href="http://bbs.vfleetcn.org" target="_blank" title="VFCN中国虚拟舰队的论坛">中国虚拟舰队</a></td>
+
+           <td width="14%"><a href="http://www.001.com.cn/forum/game2/index.html" target="_blank" title="Combat-Sim.net和AFwing.com共同组建的军事模拟游戏虚拟基地">傲气菜鸟军事游戏论坛</a></td>
+
+           <td width="14%"><a href="http://combatsim.cpgl.net/cgi-bin/leoboard.cgi" target="_blank" title="中文门户军事模拟游戏网站内论坛">COMBAT-SIM.NET论坛</a></td>
+
+           <td width="14%"><a href="http://jackly.cpgl.net/bbs/index.php" target="_blank" title="I/JG54绿心联队的社区">二战空军社区</a></td>
+
+           <td width="14%"><a href="http://www.layman.cn/index.asp" target="_blank" title="屬於上海寧俄飛行論壇">Layman飛行學校</a></td>
+
+           <td width="14%"><a href="http://3gobbs.rpwt.org/" target="_blank" title="3GO网络空军论坛">3GO网络空军</a></td>
+
+           <tr>
+           
+           <td width="14%"><a href="http://bbs.samren.com" target="_blank" title="SAM军事学院专业论坛">SAM军事学院</a></td>
+
+           <td width="14%"><a href="http://aerofield.bbs.xilu.com/" target="_blank" title="专业级的航空知识论坛">方方航空论坛</a></td>
+
+           <td width="14%"><a href="http://bbs.cga.com.cn/" target="_blank" title="浩方对战平台论坛">浩方论坛</a></td>
+
+           <td width="14%"><a href="http://www.chinatigers.com" target="_blank" title="爱飞者天堂，清华同方老大——高高手的地盘，需要杆子的兄弟们别错过了">中国老虎会</a></td>
+<td width="14%"></td><td width="14%"></td><td width="14%"></td><td width="14%"></td><td width="14%"></td>	
+         </tr>
+        </table>
+</td><td width="1" align="center" valign="middle" bgcolor="#999999"></td></tr></table>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" bgcolor="#999999" align='center'><tr valign="top"><td colspan="2" height="1"></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="1"><tr><td></td></tr></table>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+
+<table width="95%"  border="0" cellspacing="0" cellpadding="0" height="10" align='center'><tr><td>
+</td>
+<td align="right"><a href="setallforumisread.asp">[ 标记所有论坛为已读 ]</a></td></tr></table>
+
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td colspan="2" align="right"><hr width="100%" size="1" noshade> </td>
+  </tr>
+  <tr> 
+    <td width="70%"><strong><font color="#6699CC">Falcon</font>CN</strong>.com&#8482;<br>
+      CN101 Griffin Squadron Forum<br>
+      Copyright 2002 FalconCN.com All rights reserved<br>
+      Power by: EzRick.com</td>
+    <td width="30%" align="right" valign="top"> <a href="../intro.asp?action=about">About 
+      Us &amp; Contact Info</a> | <A HREF="../default.asp">Home</A><BR>
+      counter:65240 </td>
+  </tr>
+</table>
+
+
+</body></html>

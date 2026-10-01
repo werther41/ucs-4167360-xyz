@@ -1,0 +1,421 @@
+FalconCN | CN101TF Griffin Squadron
+:: Home Base
+:: News
+:: Bulletin Board
+:: Topics
+:: Downloads
+:: WebLinks
+:: CN101TF Griffin Squadron
+:: Roster
+:: Join our squadron
+首页
+|
+主题文章
+|
+下载地带
+|
+相关连接
+|
+中队管理
+|
+中队论坛
+Welcome to
+Falcon
+CN.com
+::
+Photo-Realistic Terrain 地形补丁
+"Deuky" 在
+F4HQ
+发布了Falcon 4的Photo-Realistic Terrain地形补丁，该补丁兼容于BMS2.0，点击
+这里
+查看详细信息。
+Read More
+::
+最新F/A-22测试视频
+"RazorBlade"在
+F4HQ
+论坛
+上提供了F/A-22的两个视频下载，透露了有关机动性和武器方面的信息，强烈推荐。
+进入论坛下载
+... |
+Read More
+::
+Art of Kill
+FalconCN论坛近日开设
+ART OF KILL
+分区
+，主要保存讨论关于BFM和ACM空战技术资料，讨论区管理员由"Eagle566"担任，目前的内容包括他翻译的经典大作〈Art of the Kill 空战的艺术〉。
+... |
+Read More
+::
+Cockpit 3D Mirage 2000-C
+CheckSix!
+发布Mirage 2000-c的3D座舱插件，兼容于BMS2/OCI/FF3。
+Read More
+::
+EF2000 Skinspack v1.1
+ECV56联队
+在
+F4UT论坛
+上发布EF2000 skin插件最新1.1版本，据称只兼容于SP4+BMS。
+Read More
+有新消息要提交？
+:: New Articles| 最新更新文章 ::
+□ [
+增效Utils
+]
+Photo-Realistic Terrain 地形补丁
+(9-22)
+□ [
+真实战机录象
+]
+最新F/A-22测试视频
+(9-17)
+□ [
+CN101中队
+]
+Art of Kill
+(9-13)
+□ [
+座舱Cockpits
+]
+Cockpit 3D Mirage 2000-C
+(9-13)
+□ [
+涂装Skins
+]
+EF2000 Skinspack v1.1
+(9-10)
+□ [
+座舱Cockpits
+]
+Mirage 2000-c 新座舱
+(9-10)
+□ [
+补丁Pitch
+]
+FF3补丁更新
+(8-21)
+□ [
+补丁Pitch
+]
+CHECK-SIX发布OCI
+(8-16)
+□ [
+Falcon动态
+]
+新的F-16系列气动模型有望在9月前发布
+(8-15)
+□ [
+补丁Pitch
+]
+FF3补丁更新
+(8-2)
+More...
+:: New Downloads | 最新下载 ::
+□ [
+真实F-16手册
+]
+美军空军F16参考手册
+(4-8)
+□ [
+真实F-16手册
+]
+F16挂载示意图
+(4-8)
+□ [
+检查表
+]
+朝鲜半岛地形检查单(Checklist)
+(4-8)
+□ [
+真实F-16手册
+]
+朝鲜半岛高分辨率地图下载
+(4-8)
+□ [
+Falcon手册
+]
+跃升攻击教程下载
+(4-8)
+□ [
+Falcon手册
+]
+SP3冷车启动教程下载
+(4-8)
+□ [
+真实F-16手册
+]
+APG-68雷达操作手册下载
+(4-8)
+□ [
+战役下载 theatres
+]
+沙漠风暴行动
+(4-8)
+□ [
+战役下载 theatres
+]
+夏威夷地型
+(4-8)
+□ [
+战役下载 theatres
+]
+越南地型
+(4-8)
+More...
+::
+主题文章
+[
+Falcon新闻
+]
+Falcon动态
+、
+补丁发布
+、
+战役发布
+[
+Falcon赏析
+]
+预览 Preview
+、
+回顾Review
+、
+采访Interview
+[
+飞行学校
+]
+快速开始
+、
+飞行基础
+、
+基本操作
+、
+航电操作
+、
+武器操作
+、
+训练任务
+、
+常见问答FAQ
+...
+[
+战术讨论
+]
+任务简报
+、
+飞行技术
+、
+战术动作
+、
+飞行故事
+、
+讨论精华
+、
+游戏装备
+...
+[
+F-16资料库
+]
+F-16 系列
+、
+航电系统
+、
+武器系统
+[
+CN101中队
+]
+CN101中队
+::
+下载地带
+[
+补丁下载
+]
+补丁Pitch
+、
+座舱Cockpits
+、
+模型Mods
+、
+声音Sounds
+、
+增效Utils
+、
+摇杆设定joysticks
+、
+涂装Skins
+、
+工具下载
+...
+[
+任务下载
+]
+任务Missions
+、
+战役下载 theatres
+[
+手册下载
+]
+Falcon手册
+、
+检查表
+、
+真实F-16手册
+[
+视频下载
+]
+ACMI
+、
+录像
+、
+真实战机录象
+□
+通知：新的队员注册系统
+□
+FalconCN.com管理中心使用说明
+□
+FalconCN.com站点栏目分类完成
+□
+CN101联队站点页面内容充实中
+□
+FalconCN.com
+More...
+User Name
+Password
+#
+Falcon4
+截图欣赏:
+#
+新手入门 :
+由于Falcon4.0完全真实的操作，复杂的安装过程，繁多的增效补丁与插件，我们为新玩家们撰写了快速上手指南。
+- 游戏简介
+- 如何得到游戏
+- 完全安装向导
+- 增效补丁与插件
+- 手册阅读向导
+- 联机对战说明
+- 常见问答集
+# CN101TF 狮鹫中队
+-
+关于CN101TF
+-
+加入中队
+-
+队员登录
+-
+队员列表
+-
+中队活动
+中队联系方式:
+TS2 [TeamSpeak]
+中队固定TS2通讯频道:
+202.98.20.11
+MSN Messenger
+MSN
+Group
+(后备基地)
+加入中队通讯组:
+MSN
+Groups
+# Members:
+-
+BlueBlood
+-
+Fox
+-
+Helios
+-
+Tom528
+-
+Werther
+-
+Member List...
+你在Falcon4的LogBook中的飞行小时数是多少？
+1-50
+50-200
+200-500
+500-2000
+大于2000
+#
+Articles
+: 87
+#
+Downloads
+: 78
+# Classification : 39
+#  Online :
+777
+□
+3Go网络空军
+□
+Jane's F/A-18专题站
+□
+Fox3 模拟飞行中队
+□
+菜鸟论坛
+□
+军事模拟游戏网
+□
+CHN联队
+□
+I/JG54绿心联队
+□
+SAM军事学院
+□
+中国飞行模拟组织
+□
+中国虚拟舰队VFCN
+□
+VFCN飞虎队
+Quick Links
+□
+F4 Freeware
+□
+Falcon4 HQ
+□
+Falcon UK
+□
+PMC TFW
+□
+F4 Unified Team
+□
+F4 Community
+□
+Falcon5
+□
+Frugals World
+□
+SimHQ
+□
+BiohazCentra
+□
+The Wargamer
+□
+COMBATSIM.COM
+□
+Fighter OPS
+Link to us
+::
+关于本站
+|
+联系方式
+|
+隐私保护
+|
+版权说明
+|
+网站地图
+::
+Top
+::
+Falcon
+CN
+.com™
+Falcon4 Chinese Support Center | CN101TF Griffin Squadron
+Copyright 2002 FalconCN.com All rights reserved
+Designed by
+Werther-041
+Administration
+CP
+|
+Home

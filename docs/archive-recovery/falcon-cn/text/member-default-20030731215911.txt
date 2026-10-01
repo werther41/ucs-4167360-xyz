@@ -1,0 +1,67 @@
+FalconCN | CN101TF Griffin Squadron
+:: Home Base
+:: News
+:: Bulletin Board
+:: Topics
+:: Downloads
+:: WebLinks
+:: CN101TF Griffin Squadron
+:: Join our squadron
+CN101TF
+队员管理 :
+-
+Home
+-
+Join us 加入中队
+-
+Login 队员登录
+-
+Edit Info 信息修改
+-
+Logout 注销
+-
+Roster 队员列表
+-
+Flight Report 飞行任务报告
+-
+Score Board 分数板
+-
+Verify 队员审核
+CN101TF Griffin
+Squadron | CN101 狮鹫战术联队
+CN101TF 狮鹫战术联队，是一只现代战机模拟飞行中队，由一群追求高拟真度的骨灰级飞行模拟玩家组成，并选择Falcon4.0作为模拟软件。
+- 欢迎来到CN101中队，如果您想加入我们中队，请点这里
+加入CN101中队
+- 如果你是队员，请 从这里登录
+中队队员登陆
+Callsign:
+Password:
+Squadron Member Register System (SMRS) v1.0 alpha
+Programed by
+Werther 041
+-
+Administration CP
+::
+关于本站
+|
+联系方式
+|
+隐私保护
+|
+版权说明
+|
+网站地图
+::
+Top
+::
+Falcon
+CN
+.com™
+Falcon4 Chinese Support Center | CN101TF Griffin Squadron
+Copyright 2002 FalconCN.com All rights reserved
+Designed by
+Werther
+Administration
+CP
+|
+Home

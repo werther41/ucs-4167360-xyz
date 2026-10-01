@@ -1,0 +1,441 @@
+{
+  "downloads": [
+    {
+      "site": "virtualfly-v1",
+      "key": "home",
+      "timestamp": "20010607005717",
+      "original_url": "http://go2.163.com:80/~werther/home.htm",
+      "wayback_url": "https://web.archive.org/web/20010607005717id_/http://go2.163.com:80/~werther/home.htm",
+      "http_status": 200,
+      "bytes": 28466,
+      "text_chars": 1816
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "home-root",
+      "timestamp": "20010404042839",
+      "original_url": "http://go2.163.com:80/~werther/",
+      "wayback_url": "https://web.archive.org/web/20010404042839id_/http://go2.163.com:80/~werther/",
+      "http_status": 200,
+      "bytes": 6914,
+      "text_chars": 218
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "home-root",
+      "timestamp": "20010516041220",
+      "original_url": "http://go2.163.com:80/~werther/",
+      "wayback_url": "https://web.archive.org/web/20010516041220id_/http://go2.163.com:80/~werther/",
+      "http_status": 200,
+      "bytes": 6915,
+      "text_chars": 218
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "f15-school-index",
+      "timestamp": "20010410190713",
+      "original_url": "http://go2.163.com:80/~werther/flyschool/f15all/index.htm",
+      "wayback_url": "https://web.archive.org/web/20010410190713id_/http://go2.163.com:80/~werther/flyschool/f15all/index.htm",
+      "http_status": 200,
+      "bytes": 2603,
+      "text_chars": 364
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "f15-school-index",
+      "timestamp": "20010628040006",
+      "original_url": "http://go2.163.com:80/~werther/flyschool/f15all/index.htm",
+      "wayback_url": "https://web.archive.org/web/20010628040006id_/http://go2.163.com:80/~werther/flyschool/f15all/index.htm",
+      "http_status": 200,
+      "bytes": 2469,
+      "text_chars": 364
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "f15-article",
+      "timestamp": "20010419180342",
+      "original_url": "http://go2.163.com:80/~werther/flyschool/f15all/F15.htm",
+      "wayback_url": "https://web.archive.org/web/20010419180342id_/http://go2.163.com:80/~werther/flyschool/f15all/F15.htm",
+      "http_status": 200,
+      "bytes": 16395,
+      "text_chars": 1571
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "download-page",
+      "timestamp": "20010410182206",
+      "original_url": "http://go2.163.com:80/~werther/downlond/smoni.htm",
+      "wayback_url": "https://web.archive.org/web/20010410182206id_/http://go2.163.com:80/~werther/downlond/smoni.htm",
+      "http_status": 200,
+      "bytes": 2153,
+      "text_chars": 149
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "download-lhx",
+      "timestamp": "20010410180048",
+      "original_url": "http://go2.163.com:80/~werther/downlond/lhx.htm",
+      "wayback_url": "https://web.archive.org/web/20010410180048id_/http://go2.163.com:80/~werther/downlond/lhx.htm",
+      "http_status": 200,
+      "bytes": 2128,
+      "text_chars": 185
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "download-lhx",
+      "timestamp": "20010624160837",
+      "original_url": "http://go2.163.com:80/~werther/downlond/lhx.htm",
+      "wayback_url": "https://web.archive.org/web/20010624160837id_/http://go2.163.com:80/~werther/downlond/lhx.htm",
+      "http_status": 200,
+      "bytes": 2128,
+      "text_chars": 185
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "links",
+      "timestamp": "20010410085752",
+      "original_url": "http://go2.163.com:80/~werther/Templates/link.htm",
+      "wayback_url": "https://web.archive.org/web/20010410085752id_/http://go2.163.com:80/~werther/Templates/link.htm",
+      "http_status": 200,
+      "bytes": 25193,
+      "text_chars": 1677
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "links",
+      "timestamp": "20010624160123",
+      "original_url": "http://go2.163.com:80/~werther/Templates/link.htm",
+      "wayback_url": "https://web.archive.org/web/20010624160123id_/http://go2.163.com:80/~werther/Templates/link.htm",
+      "http_status": 200,
+      "bytes": 25193,
+      "text_chars": 1677
+    },
+    {
+      "site": "virtualfly-v1",
+      "key": "howfly-main",
+      "timestamp": "20010503142803",
+      "original_url": "http://go2.163.com:80/~werther/flyschool/howfly/main1.htm",
+      "wayback_url": "https://web.archive.org/web/20010503142803id_/http://go2.163.com:80/~werther/flyschool/howfly/main1.htm",
+      "http_status": 200,
+      "bytes": 9102,
+      "text_chars": 2202
+    },
+    {
+      "site": "virtualfly-v2",
+      "key": "home",
+      "timestamp": "20020530171518",
+      "original_url": "http://591fly.cpgl.net:80/",
+      "wayback_url": "https://web.archive.org/web/20020530171518id_/http://591fly.cpgl.net:80/",
+      "http_status": 200,
+      "bytes": 163,
+      "text_chars": 21
+    },
+    {
+      "site": "virtualfly-v2",
+      "key": "home",
+      "timestamp": "20031119014109",
+      "original_url": "http://591fly.cpgl.net:80/",
+      "wayback_url": "https://web.archive.org/web/20031119014109id_/http://591fly.cpgl.net:80/",
+      "http_status": 200,
+      "bytes": 308,
+      "text_chars": 17
+    },
+    {
+      "site": "virtualfly-v2",
+      "key": "home",
+      "timestamp": "20050728120759",
+      "original_url": "http://591fly.cpgl.net:80/",
+      "wayback_url": "https://web.archive.org/web/20050728120759id_/http://591fly.cpgl.net:80/",
+      "http_status": 200,
+      "bytes": 308,
+      "text_chars": 17
+    },
+    {
+      "site": "virtualfly-v2",
+      "key": "news-index",
+      "timestamp": "20041205144422",
+      "original_url": "http://591fly.cpgl.net:80/newss/index.php",
+      "wayback_url": "https://web.archive.org/web/20041205144422id_/http://591fly.cpgl.net:80/newss/index.php",
+      "http_status": 200,
+      "bytes": 15717,
+      "text_chars": 1757
+    },
+    {
+      "site": "virtualfly-v2",
+      "key": "service-index",
+      "timestamp": "20041205163323",
+      "original_url": "http://591fly.cpgl.net:80/service/index.php",
+      "wayback_url": "https://web.archive.org/web/20041205163323id_/http://591fly.cpgl.net:80/service/index.php",
+      "http_status": 200,
+      "bytes": 9292,
+      "text_chars": 238
+    },
+    {
+      "site": "virtualfly-v2",
+      "key": "service-bbs",
+      "timestamp": "20041206003351",
+      "original_url": "http://591fly.cpgl.net:80/service/bbs.php",
+      "wayback_url": "https://web.archive.org/web/20041206003351id_/http://591fly.cpgl.net:80/service/bbs.php",
+      "http_status": 200,
+      "bytes": 9345,
+      "text_chars": 238
+    },
+    {
+      "site": "virtualfly-v2",
+      "key": "service-help",
+      "timestamp": "20041206003636",
+      "original_url": "http://591fly.cpgl.net:80/service/help.php",
+      "wayback_url": "https://web.archive.org/web/20041206003636id_/http://591fly.cpgl.net:80/service/help.php",
+      "http_status": 200,
+      "bytes": 12003,
+      "text_chars": 1232
+    },
+    {
+      "site": "falcon-cn",
+      "key": "home",
+      "timestamp": "20030423083252",
+      "original_url": "http://falconcn.com:80/",
+      "wayback_url": "https://web.archive.org/web/20030423083252id_/http://falconcn.com:80/",
+      "http_status": 200,
+      "bytes": 1628,
+      "text_chars": 191
+    },
+    {
+      "site": "falcon-cn",
+      "key": "home",
+      "timestamp": "20030719152504",
+      "original_url": "http://falconcn.com:80/",
+      "wayback_url": "https://web.archive.org/web/20030719152504id_/http://falconcn.com:80/",
+      "http_status": 200,
+      "bytes": 28477,
+      "text_chars": 3670
+    },
+    {
+      "site": "falcon-cn",
+      "key": "home",
+      "timestamp": "20040520100329",
+      "original_url": "http://falconcn.com:80/",
+      "wayback_url": "https://web.archive.org/web/20040520100329id_/http://falconcn.com:80/",
+      "http_status": 200,
+      "bytes": 153,
+      "text_chars": 113
+    },
+    {
+      "site": "falcon-cn",
+      "key": "home-www",
+      "timestamp": "20030611032114",
+      "original_url": "http://www.falconcn.com:80/index.asp",
+      "wayback_url": "https://web.archive.org/web/20030611032114id_/http://www.falconcn.com:80/index.asp",
+      "http_status": 200,
+      "bytes": 28324,
+      "text_chars": 3624
+    },
+    {
+      "site": "falcon-cn",
+      "key": "home-www",
+      "timestamp": "20030810214918",
+      "original_url": "http://www.falconcn.com:80/index.asp",
+      "wayback_url": "https://web.archive.org/web/20030810214918id_/http://www.falconcn.com:80/index.asp",
+      "http_status": 200,
+      "bytes": 28478,
+      "text_chars": 3670
+    },
+    {
+      "site": "falcon-cn",
+      "key": "home-www",
+      "timestamp": "20031007234522",
+      "original_url": "http://www.falconcn.com:80/index.asp",
+      "wayback_url": "https://web.archive.org/web/20031007234522id_/http://www.falconcn.com:80/index.asp",
+      "http_status": 200,
+      "bytes": 302,
+      "text_chars": 0
+    },
+    {
+      "site": "falcon-cn",
+      "key": "article-o2",
+      "timestamp": "20030714004140",
+      "original_url": "http://falconcn.com:80/fir.asp?o=2",
+      "wayback_url": "https://web.archive.org/web/20030714004140id_/http://falconcn.com:80/fir.asp?o=2",
+      "http_status": 200,
+      "bytes": 19007,
+      "text_chars": 2109
+    },
+    {
+      "site": "falcon-cn",
+      "key": "section-1001",
+      "timestamp": "20030718111328",
+      "original_url": "http://falconcn.com:80/sec.asp?o=1001",
+      "wayback_url": "https://web.archive.org/web/20030718111328id_/http://falconcn.com:80/sec.asp?o=1001",
+      "http_status": 200,
+      "bytes": 12285,
+      "text_chars": 882
+    },
+    {
+      "site": "falcon-cn",
+      "key": "member-list",
+      "timestamp": "20030801060711",
+      "original_url": "http://falconcn.com:80/member/list.asp",
+      "wayback_url": "https://web.archive.org/web/20030801060711id_/http://falconcn.com:80/member/list.asp",
+      "http_status": 200,
+      "bytes": 18651,
+      "text_chars": 2953
+    },
+    {
+      "site": "falcon-cn",
+      "key": "member-default",
+      "timestamp": "20030731215911",
+      "original_url": "http://falconcn.com:80/member/default.asp",
+      "wayback_url": "https://web.archive.org/web/20030731215911id_/http://falconcn.com:80/member/default.asp",
+      "http_status": 200,
+      "bytes": 8258,
+      "text_chars": 809
+    },
+    {
+      "site": "falcon-cn",
+      "key": "bbs-index",
+      "timestamp": "20030711190056",
+      "original_url": "http://falconcn.com:80/bbs/index.asp",
+      "wayback_url": "https://web.archive.org/web/20030711190056id_/http://falconcn.com:80/bbs/index.asp",
+      "http_status": 200,
+      "bytes": 42522,
+      "text_chars": 3002
+    },
+    {
+      "site": "falcon-cn",
+      "key": "intro-contacts",
+      "timestamp": "20030726131039",
+      "original_url": "http://falconcn.com:80/intro.asp?action=contacts",
+      "wayback_url": "https://web.archive.org/web/20030726131039id_/http://falconcn.com:80/intro.asp?action=contacts",
+      "http_status": 200,
+      "bytes": 7415,
+      "text_chars": 733
+    },
+    {
+      "site": "cn101tf",
+      "key": "home-2004",
+      "timestamp": "20040804011835",
+      "original_url": "http://www.cn101tf.com:80/",
+      "wayback_url": "https://web.archive.org/web/20040804011835id_/http://www.cn101tf.com:80/",
+      "http_status": 200,
+      "bytes": 28036,
+      "text_chars": 3141
+    },
+    {
+      "site": "cn101tf",
+      "key": "home-2004",
+      "timestamp": "20070204015732",
+      "original_url": "http://www.cn101tf.com:80/",
+      "wayback_url": "https://web.archive.org/web/20070204015732id_/http://www.cn101tf.com:80/",
+      "http_status": 200,
+      "bytes": 1556,
+      "text_chars": 189
+    },
+    {
+      "site": "cn101tf",
+      "key": "home-2004",
+      "timestamp": "20091108013636",
+      "original_url": "http://www.cn101tf.com:80/",
+      "wayback_url": "https://web.archive.org/web/20091108013636id_/http://www.cn101tf.com:80/",
+      "http_status": 200,
+      "bytes": 11256,
+      "text_chars": 5472
+    },
+    {
+      "site": "cn101tf",
+      "key": "index-2004",
+      "timestamp": "20040804024039",
+      "original_url": "http://www.cn101tf.com:80/index.asp",
+      "wayback_url": "https://web.archive.org/web/20040804024039id_/http://www.cn101tf.com:80/index.asp",
+      "http_status": 200,
+      "bytes": 28036,
+      "text_chars": 3141
+    },
+    {
+      "site": "cn101tf",
+      "key": "index-2004",
+      "timestamp": "20060211083300",
+      "original_url": "http://www.cn101tf.com:80/index.asp",
+      "wayback_url": "https://web.archive.org/web/20060211083300id_/http://www.cn101tf.com:80/index.asp",
+      "http_status": 200,
+      "bytes": 28335,
+      "text_chars": 3211
+    },
+    {
+      "site": "cn101tf",
+      "key": "index-2004",
+      "timestamp": "20070810095529",
+      "original_url": "http://www.cn101tf.com:80/index.asp",
+      "wayback_url": "https://web.archive.org/web/20070810095529id_/http://www.cn101tf.com:80/index.asp",
+      "http_status": 200,
+      "bytes": 115,
+      "text_chars": 82
+    },
+    {
+      "site": "cn101tf",
+      "key": "bbs-2004",
+      "timestamp": "20040804020700",
+      "original_url": "http://www.cn101tf.com:80/bbs/index.asp",
+      "wayback_url": "https://web.archive.org/web/20040804020700id_/http://www.cn101tf.com:80/bbs/index.asp",
+      "http_status": 200,
+      "bytes": 61154,
+      "text_chars": 5102
+    },
+    {
+      "site": "cn101tf",
+      "key": "bbs-2004",
+      "timestamp": "20060525133059",
+      "original_url": "http://www.cn101tf.com:80/bbs/index.asp",
+      "wayback_url": "https://web.archive.org/web/20060525133059id_/http://www.cn101tf.com:80/bbs/index.asp",
+      "http_status": 200,
+      "bytes": 61371,
+      "text_chars": 5332
+    },
+    {
+      "site": "cn101tf",
+      "key": "bbs-2004",
+      "timestamp": "20070810095455",
+      "original_url": "http://www.cn101tf.com:80/bbs/index.asp",
+      "wayback_url": "https://web.archive.org/web/20070810095455id_/http://www.cn101tf.com:80/bbs/index.asp",
+      "http_status": 200,
+      "bytes": 115,
+      "text_chars": 82
+    },
+    {
+      "site": "cn101tf",
+      "key": "article-2004",
+      "timestamp": "20040804045157",
+      "original_url": "http://www.cn101tf.com:80/fir.asp?o=107",
+      "wayback_url": "https://web.archive.org/web/20040804045157id_/http://www.cn101tf.com:80/fir.asp?o=107",
+      "http_status": 200,
+      "bytes": 22934,
+      "text_chars": 2526
+    },
+    {
+      "site": "cn101tf",
+      "key": "article-2004",
+      "timestamp": "20041012011331",
+      "original_url": "http://www.cn101tf.com:80/fir.asp?o=107",
+      "wayback_url": "https://web.archive.org/web/20041012011331id_/http://www.cn101tf.com:80/fir.asp?o=107",
+      "http_status": 200,
+      "bytes": 23456,
+      "text_chars": 2645
+    },
+    {
+      "site": "cn101tf",
+      "key": "article-2004",
+      "timestamp": "20041217145344",
+      "original_url": "http://www.cn101tf.com:80/fir.asp?o=107",
+      "wayback_url": "https://web.archive.org/web/20041217145344id_/http://www.cn101tf.com:80/fir.asp?o=107",
+      "http_status": 200,
+      "bytes": 21323,
+      "text_chars": 2310
+    }
+  ],
+  "missing_from_cdx": [
+    [
+      "falcon-cn",
+      "intro-about",
+      "http://falconcn.com/intro.asp?action=about"
+    ]
+  ]
+}

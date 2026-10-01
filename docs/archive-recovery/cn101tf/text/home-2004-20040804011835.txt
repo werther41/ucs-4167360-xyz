@@ -1,0 +1,416 @@
+FalconCN | CN101TF Griffin Squadron
+:: Home Base
+:: News
+:: Bulletin Board
+:: Topics
+:: Downloads
+:: WebLinks
+:: CN101TF Griffin Squadron
+:: Roster
+:: Join our squadron
+首页
+|
+主题文章
+|
+下载地带
+|
+相关连接
+|
+中队管理
+|
+中队论坛
+Welcome to
+Falcon
+CN.com
+::
+FF3补丁更新
+Falcon 4的最新升级包FreeFalcon 3修正补丁HotFix v1.0
+官方下载
+(4.5M)。 ... |
+Read More
+::
+Cougar HOTAS驱动更新
+硬件厂商ThrustMaster发布了飞行控制器Cougar HOTAS的最新v3.00.1驱动软件包
+下载
+或
+这里
+(3.8M)。 ... |
+Read More
+::
+中队7.29红旗演习即将进行
+101中队计划在7.29日晚模拟美国空军RED FLAG演习，分红蓝攻守双方，守方的机场被毁或者攻方编队被消灭即判攻方赢或者守方赢，没有AWACS的协助，只有本机机载雷达，旨在通过团队的 ... |
+Read More
+::
+FF3手册下载
+Falcon 4的最新升级包FreeFalcon 3手册和补充座舱
+官方下载
+。 ... |
+Read More
+::
+FreeFalcon3发布
+Falcon 4的最新升级包
+FreeFalcon 3
+已发布通过B
+T下载
+。 ... |
+Read More
+有新消息要提交？
+:: New Articles| 最新更新文章 ::
+□ [
+补丁Pitch
+]
+FF3补丁更新
+(8-2)
+□ [
+武器操作
+]
+LGB系列激光制导炸弹操作步骤（SP2）
+(7-31)
+□ [
+武器操作
+]
+CBU系列集束炸弹操作步骤（SP2）
+(7-31)
+□ [
+武器操作
+]
+AGM-65系列空对地导弹操作步骤（SP2）
+(7-31)
+□ [
+摇杆设定joysticks
+]
+Cougar HOTAS驱动更新
+(7-17)
+□ [
+涂装Skins
+]
+AIM-120 B&C 高纹理skin
+(7-29)
+□ [
+检查表
+]
+西奈半岛高分辨率地形图（检查单）下载
+(7-29)
+□ [
+CN101中队
+]
+中队7.29红旗演习即将进行
+(7-29)
+□ [
+座舱Cockpits
+]
+FF3手册下载
+(7-24)
+□ [
+补丁Pitch
+]
+FreeFalcon3发布
+(7-17)
+More...
+:: New Downloads | 最新下载 ::
+□ [
+真实F-16手册
+]
+RCS-RWR训练程序
+(4-8)
+□ [
+真实F-16手册
+]
+TWS训练程序
+(4-8)
+□ [
+真实F-16手册
+]
+BullseyeTrainer训练程序
+(4-8)
+□ [
+工具下载
+]
+Tacedit2.1任务编辑工具
+(4-8)
+□ [
+工具下载
+]
+Kunsan thunderstorm雷暴天气
+(4-8)
+□ [
+工具下载
+]
+Kunsan heavy rain大雨天气
+(4-8)
+□ [
+工具下载
+]
+Scathered Storm F4Weather附件
+(4-8)
+□ [
+工具下载
+]
+F4Weather1.1天气工具
+(4-8)
+□ [
+工具下载
+]
+武器投放参数计算程序ProAttack
+(4-8)
+□ [
+工具下载
+]
+F4Patch的插件包生成工具
+(4-8)
+More...
+::
+主题文章
+[
+Falcon新闻
+]
+Falcon动态
+、
+补丁发布
+、
+战役发布
+[
+Falcon赏析
+]
+预览 Preview
+、
+回顾Review
+、
+采访Interview
+[
+飞行学校
+]
+快速开始
+、
+飞行基础
+、
+基本操作
+、
+航电操作
+、
+武器操作
+、
+训练任务
+、
+常见问答FAQ
+...
+[
+战术讨论
+]
+任务简报
+、
+飞行技术
+、
+战术动作
+、
+飞行故事
+、
+讨论精华
+、
+游戏装备
+...
+[
+F-16资料库
+]
+F-16 系列
+、
+航电系统
+、
+武器系统
+[
+CN101中队
+]
+CN101中队
+::
+下载地带
+[
+补丁下载
+]
+补丁Pitch
+、
+座舱Cockpits
+、
+模型Mods
+、
+声音Sounds
+、
+增效Utils
+、
+摇杆设定joysticks
+、
+涂装Skins
+、
+工具下载
+...
+[
+任务下载
+]
+任务Missions
+、
+战役下载 theatres
+[
+手册下载
+]
+Falcon手册
+、
+检查表
+、
+真实F-16手册
+[
+视频下载
+]
+ACMI
+、
+录像
+、
+真实F-16录像
+□
+通知：新的队员注册系统
+□
+FalconCN.com管理中心使用说明
+□
+FalconCN.com站点栏目分类完成
+□
+CN101联队站点页面内容充实中
+□
+FalconCN.com
+More...
+User Name
+Password
+#
+Falcon4
+截图欣赏:
+#
+新手入门 :
+由于Falcon4.0完全真实的操作，复杂的安装过程，繁多的增效补丁与插件，我们为新玩家们撰写了快速上手指南。
+- 游戏简介
+- 如何得到游戏
+- 完全安装向导
+- 增效补丁与插件
+- 手册阅读向导
+- 联机对战说明
+- 常见问答集
+# CN101TF 狮鹫中队
+-
+关于CN101TF
+-
+加入中队
+-
+队员登录
+-
+队员列表
+-
+中队活动
+中队联系方式:
+TS2 [TeamSpeak]
+中队固定TS2通讯频道:
+202.98.20.11
+MSN Messenger
+MSN
+Group
+(后备基地)
+加入中队通讯组:
+MSN
+Groups
+# Members:
+-
+BlueBlood
+-
+Fox
+-
+Helios
+-
+Tom528
+-
+Werther
+-
+Member List...
+你在Falcon4的LogBook中的飞行小时数是多少？
+1-50
+50-200
+200-500
+500-2000
+大于2000
+#
+Articles
+: 77
+#
+Downloads
+: 78
+# Classification : 39
+#  Online :
+1202
+□
+3Go网络空军
+□
+Jane's F/A-18专题站
+□
+Fox3 模拟飞行中队
+□
+菜鸟论坛
+□
+军事模拟游戏网
+□
+CHN联队
+□
+I/JG54绿心联队
+□
+SAM军事学院
+□
+中国飞行模拟组织
+□
+中国虚拟舰队VFCN
+□
+VFCN飞虎队
+Quick Links
+□
+F4 Freeware
+□
+Falcon4 HQ
+□
+Falcon UK
+□
+PMC TFW
+□
+F4 Unified Team
+□
+F4 Community
+□
+Falcon5
+□
+Frugals World
+□
+SimHQ
+□
+BiohazCentra
+□
+The Wargamer
+□
+COMBATSIM.COM
+□
+Fighter OPS
+Link to us
+::
+关于本站
+|
+联系方式
+|
+隐私保护
+|
+版权说明
+|
+网站地图
+::
+Top
+::
+Falcon
+CN
+.com™
+Falcon4 Chinese Support Center | CN101TF Griffin Squadron
+Copyright 2002 FalconCN.com All rights reserved
+Designed by
+Werther-041
+Administration
+CP
+|
+Home
