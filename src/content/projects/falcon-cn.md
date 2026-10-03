@@ -1,8 +1,9 @@
 ---
 name: Falcon.cn
-blurb: Falcon 4.0 support site and the CN101TF Griffin Squadron home. Homebrew ASP CMS.
+blurb: Falcon 4.0 support site and the CN101TF Griffin Squadron home. Homebrew
+  ASP CMS.
 status: dormant
-started: '2002'
+started: "2002"
 stack:
   - ASP
   - Access
@@ -13,8 +14,8 @@ tags:
   - flight-sim
   - archive
 order: 9
+featured: false
 ---
-
 Designed and developed in 2002: a support site and community for MicroProse's
 Falcon 4.0, the hardcore F-16 combat sim. After meeting Fox, Helios, BlueBlood
 and others online, we started the CN101TF "Griffin Squadron" virtual squadron,
@@ -77,13 +78,6 @@ this recovery.
 
 ## What didn't survive
 
-Flight-report and score-board *contents* were never captured (the nav proves
-they existed; only the roster list page was archived). BBS threads beyond the
-forum index, and the member edit/verify flows, are also missing. One loose
-end: my 2002 VirtualFly article links to `http://f16-falcon.myrice.com` as
-"CN101中队的网站", but I don't recognize that host — my squadron sites
-were falconcn.com and cn101tf.com. My guess is someone took the squadron's
-web presence over around 2003, after my time.
-
-Recovered snapshots: `docs/archive-recovery/falcon-cn/` and
-`docs/archive-recovery/cn101tf/`.
+Flight-report and score-board *contents* were never captured (the nav proves  
+they existed; only the roster list page was archived). BBS threads beyond the  
+forum index, and the member edit/verify flows, are also missing. 
