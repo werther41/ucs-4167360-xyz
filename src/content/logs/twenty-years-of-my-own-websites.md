@@ -1,29 +1,39 @@
 ---
-title: Twenty years of my own websites, in order
+title: Twenty-seven years of my own websites, in order
 date: 2026-07-29
-summary: Tables, then divs, then frameworks, then back to plain files. A tour of the archive shelf.
+summary: The real start was 1999, not 2005. A corrected tour of the archive shelf.
 tags:
   - archive
   - notes
 kind: log
+project: uncommon-solid
+draft: false
 ---
 
-I have been making my own websites since 2005, and until recently I could not have told you how many there had been. The answer is eleven, if you count the two that never left my hard drive, and going through them in order is a fairly efficient way to feel old.
+An earlier version of this post said I had been making websites since 2005. That was wrong — the real start was 1999, and the middle is blurrier than I admitted. Here is the corrected version, with the parts I can actually account for.
 
-## The shape of it
+## 1999 — VirtualFly.net
 
-The arc is almost embarrassingly typical. Tables and a frameset. Then divs and floats, and a long stretch where every site had a three-column layout it did not need. Then a CMS, because I had convinced myself that writing a post should involve a login screen. Then a framework, then a different framework, then a static site generator, then a different static site generator.
+It started with Jane's IAF and an F-15 sim. I wanted a website about flight sims, so I built one in MS FrontPage — my first. It lived as static HTML on 163.com's free hosting: the first "domain", 591fly.yeah.net, just redirected to go2.163.com/~werther/.
 
-And now: plain files, built once, served from the edge. Which is roughly where I started, except the files are generated and the edge is not a friend's spare server.
+Later I rebuilt it in Dreamweaver 3 with graphics from Fireworks, and eventually it became a PHPNuke portal on free PHP + MySQL hosting at 591fly.cpgl.net — by 2003 it had 1,500 registered users, a file library, and forums. My portfolio calls it "a flight simulation portal and community in China". The footer of the early version gave my contact as "my oicq:4167360" — the same number that is now this site's domain.
 
-## What actually survived
+## 2002 — Falcon.cn
 
-Not the code. None of it runs. The PHP needs a version that no longer exists, the jQuery plugins are 404s, and one site depended on a Flash object I cannot even open to look at.
+Falcon 4.0, the hardcore F-16 sim, needed a Chinese support site, so I built one — and along the way met Fox, Helios, and BlueBlood online. We started the CN101TF "Griffin Squadron" virtual squadron, and falconcn.com became its home base.
 
-What survived is the writing, and only because it was in the database backups I kept out of superstition rather than plan. Every migration lost something — the 2009 site's comments are gone entirely, and the 2013 one has posts with broken image references I have never gone back to fix.
+This one I built properly: a homebrew ASP + Access CMS, plus a squadron management system with member registration, flight reporting, and automatic scoring. Sixty-four members on the roster; my callsign was werther, serial CN101-041. The BBS held 335 topics and 1,807 replies at last capture. The footer read "Designed by Werther-041".
 
-The lesson I keep re-learning is that the content is the asset and the site is the packaging, and I have spent something like twenty years putting almost all of my effort into the packaging.
+## The blurry middle
+
+Between Falcon.cn and this site there is a stretch I have not reconstructed. The old version of this post had specifics here that I cannot verify, so they are out. What I know is the shape: tables and framesets, then divs and floats, then a CMS phase, then frameworks, then static generators.
+
+## Now — plain files on the edge
+
+And now: plain files, built once, served from the edge. Which is roughly where I started in 1999, except the files are Markdown and the edge is Cloudflare's.
+
+The lesson I keep re-learning is that the content is the asset and the site is the packaging, and I have spent the better part of twenty-seven years putting almost all of my effort into the packaging.
 
 ## The archive shelf
 
-So the old ones are on the workshop page now, on a shelf of their own, drawn in dashed lines because none of them are running. They are not portfolio pieces. They are more like a set of photographs where the interesting thing is what I thought was worth doing at the time.
+The old ones are on the workshop page now, recovered from the Wayback Machine — VirtualFly.net and Falcon.cn drawn from actual captures, dashed lines where nothing runs anymore. They are not portfolio pieces. They are more like photographs where the interesting thing is what I thought was worth doing at the time.
