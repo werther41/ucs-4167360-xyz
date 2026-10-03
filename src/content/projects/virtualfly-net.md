@@ -1,8 +1,9 @@
 ---
 name: VirtualFly.net
-blurb: A flight-sim portal and community. FrontPage first, then Dreamweaver, then PHPNuke.
+blurb: A flight-sim portal and community. FrontPage first, then Dreamweaver,
+  then PHPNuke.
 status: dormant
-started: '1999'
+started: "1999"
 stack:
   - MS FrontPage
   - Dreamweaver
@@ -14,8 +15,8 @@ tags:
   - flight-sim
   - archive
 order: 8
+featured: false
 ---
-
 My first website, started in 1999 after playing Jane's IAF and an F-15 flight
 sim. Built with MS FrontPage, later rebuilt with Dreamweaver and Fireworks
 for graphics. It grew into what my portfolio calls "a Flight simulation
@@ -80,5 +81,3 @@ only index and section pages. Captures of `/newss/` and `/service/` on this
 host from December 2004 are CPGL's own portal content (the free host's CMS),
 not VirtualFly's.
 
-Recovered snapshots: `docs/archive-recovery/virtualfly-v1/` and
-`docs/archive-recovery/virtualfly-v2/`.
