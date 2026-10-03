@@ -1,20 +1,22 @@
 ---
 title: ucs-server, explained
 date: 2026-10-02
-summary: The name, the printer that started it all, and why the whole homelab runs on less than a dollar a year.
+summary: The name, the printer that started it all, and why the whole homelab
+  runs on less than a dollar a year.
 tags:
   - homelab
   - self-hosting
 kind: log
+project: uncommon-solid
+draft: false
 ---
-
 The home server's hostname is `ucs-server`. UCS is UnCommon Solid — which itself was an auto-generated Xbox username I kept — plus "server", because at some point the laptop in the closet needed a name.
 
 ## The printer did it
 
-The homelab did not start with a plan. It started with a printer. My wife kept sending me Amazon return labels to print, and the old USB-only laser printer was attached to my desktop — the only machine it talked to. So I took the 2010 MacBook Pro, wiped it, and put a lightweight headless Debian on it. CUPS was the first service, and it remains the one the household actually depends on.
+The homelab did not start with a plan. It started with a printer. My wife kept sending me Amazon return labels to print, and the old USB-only laser printer was attached to my desktop — the only machine it talked to. So I took the 2010 MacBook Pro, wiped it, and put a lightweight headless Debian on it. CUPS was the first service, and it remains the one the household actually depends on. Wife can now print from her iPhone.
 
-Then I wanted file sharing and a place to host Docker apps, and CasaOS was the easiest way to get there. I use Proxmox and GCP at work; both felt like overkill for a closet.
+Then I wanted file sharing and a place to host Docker apps, and CasaOS was the easiest way to get there. I use Proxmox at work; felt like overkill for a closet.
 
 ## What earned its slot
 
@@ -38,4 +40,4 @@ That is also why there is a home-grown note sync service instead of Obsidian Syn
 
 ## The box itself
 
-It sits in the home office next to the printer, on its own UPS, silent, with no constraints to speak of — unlike the Parabricks box, which has a noise curfew. How long a 16-year-old laptop keeps this up is an open question. For now it just hums along.
+It sits in the home office next to the printer, on its own UPS(built-in battery), silent, with no constraints to speak of — unlike the Parabricks box, which has a noise curfew. How long a 16-year-old laptop keeps this up is an open question. For now it just hums along.
