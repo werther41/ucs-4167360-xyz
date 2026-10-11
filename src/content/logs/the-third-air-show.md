@@ -38,8 +38,12 @@ Yesterday. Perfect blue sky, the show flew, and the whole thing finally happened
 
 ## The chain
 
-Somewhere in between I read most of the 737 MAX investigation, before a Hawaii trip right after the COVID lockdowns. (We flew the MAX anyway. The fix was cheap — two sensors voting, one nudge per event, a disagree alert on the display, and telling pilots the system exists — which is exactly what made the original decisions sting.)
+Two Boeing investigations, twelve years apart: a 1944 biplane and a modern airliner. No single cause in either — ever. Just chains.
 
-Two Boeing investigations, twelve years apart: a 1944 biplane and a modern airliner, and the same shape underneath. No single cause, ever. A chain of small decisions — a pill for allergies, a canopy for comfort at 77, a software patch to protect a type rating, fire crews not staged ready, a cost-cutting program — each one defensible alone, fatal in combination.
+The Stearman's chain: a pill for allergies, a canopy added for comfort at 77 that became a trap, a precision stunt with no margin, fire crews not staged ready, an organizer's readiness decision. Each link defensible alone.
+
+The MAX's chain starts further back, with Boeing's leadership and a culture shift toward cutting cost. The quick, cheap answer to the A320neo was to re-engine the 737 rather than design a new plane — but the bigger engines changed how it flew, so software (MCAS) was added to fake the old handling and protect the common type rating. That rating was the sales pitch: Boeing promised airlines no simulator retraining, just a short iPad course, with a million-dollars-per-plane penalty on the table if simulator time turned out to be necessary. Then a single angle-of-attack sensor with no backup, a system the pilots were never told about, and a regulator that had delegated too much of its oversight to the company it was supposed to watch. Lion Air, Ethiopian, 346 people.
+
+I read most of the MAX investigation before a Hawaii trip right after the COVID lockdowns. We flew the MAX anyway. The fix was cheap — two sensors voting, one nudge per event, a disagree alert on the display, and telling pilots the system exists — which is exactly what made the original decisions sting.
 
 Three air shows. The first ended in fire, the second in clouds, the third in blue sky. I'll take the blue sky.
