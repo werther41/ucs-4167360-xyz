@@ -48,11 +48,11 @@ const hasRail = contents.length > 0 || !!project;
   title={title}
   description={summary}
   active="LOGS"
-  back={{ label: "LOGS", href: "/logs" }}
+  back={{ label: "LOGS", href: "/logs/" }}
   gap={26}
 >
   <nav class="back" aria-label="Back to logs">
-    <a href="/logs">◂ LOGS</a>
+    <a href="/logs/">◂ LOGS</a>
   </nav>
 
   <div class:list={["split", { solo: !hasRail }]}>
@@ -101,7 +101,7 @@ const hasRail = contents.length > 0 || !!project;
           {project && (
             <Panel pad="14px 16px">
               <PanelHeader label="PROJECT" />
-              <a class="project" href={`/workshop/${project.id}`}>
+              <a class="project" href={`/workshop/${project.id}/`}>
                 <span class="project-name">{project.data.name}</span>
                 <span class="project-meta">
                   {projectEntries.length}{" "}

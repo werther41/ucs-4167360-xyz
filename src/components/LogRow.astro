@@ -14,7 +14,7 @@ const { entry, dateFormat = 'short', compact = false, class: className } = Astro
 const { title, date, summary } = entry.data;
 ---
 
-<a href={`/logs/${entry.id}`} class:list={['row', { compact }, className]}>
+<a href={`/logs/${entry.id}/`} class:list={['row', { compact }, className]}>
   <time class="date" datetime={date.toISOString()}>
     {dateFormat === 'full' ? formatFull(date) : formatShort(date)}
   </time>

@@ -13,7 +13,7 @@ const { prev, next } = Astro.props;
   (prev || next) && (
     <nav class="pn" aria-label="More logs">
       {prev ? (
-        <a class="cell" href={`/logs/${prev.id}`}>
+        <a class="cell" href={`/logs/${prev.id}/`}>
           <span class="cap">◂ PREVIOUS</span>
           <span class="title">{prev.data.title}</span>
         </a>
@@ -21,7 +21,7 @@ const { prev, next } = Astro.props;
         <span />
       )}
       {next && (
-        <a class="cell right" href={`/logs/${next.id}`}>
+        <a class="cell right" href={`/logs/${next.id}/`}>
           <span class="cap">NEXT ▸</span>
           <span class="title">{next.data.title}</span>
         </a>

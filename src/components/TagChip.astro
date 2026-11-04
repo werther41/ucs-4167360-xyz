@@ -13,7 +13,7 @@ interface Props {
 
 const { tag, count, active = false, size = 'sm', clearHref, href, class: className } = Astro.props;
 
-const target = clearHref ?? href ?? `/tags/${tag}`;
+const target = clearHref ?? href ?? `/tags/${tag}/`;
 const label = clearHref ? `Clear the ${tag} filter` : `Entries tagged ${tag}`;
 ---
 

@@ -62,12 +62,12 @@ const status: MetaRow[] = [
         </p>
         <div class="ctas">
           <Softkey
-            href="/logs"
+            href="/logs/"
             label="READ THE LOGS"
             variant="primary"
             size="lg"
           />
-          <Softkey href="/workshop" label="OPEN THE WORKSHOP" size="lg" />
+          <Softkey href="/workshop/" label="OPEN THE WORKSHOP" size="lg" />
         </div>
       </div>
 
@@ -84,7 +84,7 @@ const status: MetaRow[] = [
       variant="section"
       label="FEATURED"
       meta={`ALL ${counts.projects} PROJECTS ▸`}
-      metaHref="/workshop"
+      metaHref="/workshop/"
       id="featured-head"
     />
     <div class="cards">
@@ -105,7 +105,7 @@ const status: MetaRow[] = [
         variant="inset"
         label="RECENT ENTRIES"
         meta={`ALL ${counts.logs} ▸`}
-        metaHref="/logs"
+        metaHref="/logs/"
       />
       {recent.map((entry, i) => <EntryRow entry={entry} lit={i === 0} />)}
     </Panel>
@@ -125,8 +125,8 @@ const status: MetaRow[] = [
           block
           external
         />
-        <Softkey href="/tags" label="TAGS" size="sm" block />
-        <Softkey href="/workshop#archive" label="ARCHIVE" size="sm" block />
+        <Softkey href="/tags/" label="TAGS" size="sm" block />
+        <Softkey href="/workshop/#archive" label="ARCHIVE" size="sm" block />
       </div>
     </div>
   </div>
