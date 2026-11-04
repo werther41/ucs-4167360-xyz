@@ -7,7 +7,7 @@ const logs = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     summary: z.string().max(160),
-    tags: z.array(z.string()).default([]),
+    tags: z.array(z.string().trim().toLowerCase()).default([]),
     project: z.string().optional(), // slug of a projects entry
     kind: z.enum(['log', 'workshop']).default('log'),
     draft: z.boolean().default(false),
@@ -25,7 +25,7 @@ const projects = defineCollection({
     stack: z.array(z.string()).default([]),
     source: z.string().url().optional(),
     demo: z.string().url().optional(),
-    tags: z.array(z.string()).default([]),
+    tags: z.array(z.string().trim().toLowerCase()).default([]),
     featured: z.boolean().default(false),
     order: z.number().default(0),
   }),

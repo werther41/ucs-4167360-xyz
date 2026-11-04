@@ -15,7 +15,7 @@ const { entry, lit = false, variant = 'panel', class: className } = Astro.props;
 const { title, date, kind } = entry.data;
 ---
 
-<a href={`/logs/${entry.id}`} class:list={['row', variant, className]}>
+<a href={`/logs/${entry.id}/`} class:list={['row', variant, className]}>
   {
     variant === 'panel' && (
       <span class:list={['marker', { lit }]} aria-hidden="true">

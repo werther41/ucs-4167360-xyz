@@ -29,4 +29,4 @@ The project was born from a desire to strip away client-side frameworks, unneces
 - **Edge Deployment**: Hosted on Cloudflare Workers, automatically built and deployed when feature branches are merged into `main`.
 - **Zero Trust Gateway**: Links directly to my physical home server via a Cloudflare Zero Trust tunnel, routing traffic securely without a VPN client.
 
-For the background story on repurposing a 2010 MacBook Pro, configuring tunnels, and finding the cheapest possible domain name to tie it all together, see the log entry on [how Uncommon Solid came to be](/logs/how-uncommon-solid-came-to-be).
+For the background story on repurposing a 2010 MacBook Pro, configuring tunnels, and finding the cheapest possible domain name to tie it all together, see the log entry on [how Uncommon Solid came to be](/logs/how-uncommon-solid-came-to-be/).

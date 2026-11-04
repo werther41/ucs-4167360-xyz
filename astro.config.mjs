@@ -10,6 +10,7 @@ import { shikiTheme } from "./src/styles/shiki-theme.mjs";
 export default defineConfig({
   site: "https://4167360.xyz",
   output: "static",
+  trailingSlash: "always",
   adapter: cloudflare({
     imageService: "compile",
   }),

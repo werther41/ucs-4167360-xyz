@@ -31,9 +31,9 @@ export const site = {
 
 export const nav = [
   { label: "HUD", href: "/" },
-  { label: "LOGS", href: "/logs" },
-  { label: "WORKSHOP", href: "/workshop" },
-  { label: "ABOUT", href: "/about" },
+  { label: "LOGS", href: "/logs/" },
+  { label: "WORKSHOP", href: "/workshop/" },
+  { label: "ABOUT", href: "/about/" },
 ] as const;
 
 export type NavKey = (typeof nav)[number]["label"];
