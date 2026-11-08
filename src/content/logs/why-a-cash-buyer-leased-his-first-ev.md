@@ -87,3 +87,33 @@ The "doing it right" version isn't about an oven breaker — that breaker is jus
 So this is where the fleet stands. The EV3 does appliance duty. The WRX, the garage queen, carries the old mission now: hold it long, let Subaru's resale reputation do its work, give it the highway stretch it needs, and keep it special. The Tiguan taught us the method. The EV3 taught us what happens when the method meets a technology that won't sit still, incentives that won't sit still, gas at $6 a gallon, and a house that won't charge a car.
 
 In 2029, we'll see which bet was right.
+
+## Three weeks in
+
+*Added Nov 7. The post above was written three days after we brought the car home. This is what happened next.*
+
+### Charging, solved
+
+The plan in the table above mostly survived, with one substitution: the splitter is an ISLEWIRE, not the NeoCharge I had priced — about $150, dryer plug in, a dryer outlet and an EV outlet out, dryer gets priority, and no adapter anywhere in the chain. I replaced the dryer receptacle with an EV-rated 14-30R, wired up the ground that was already in the box, and plugged the splitter in. No permit, no electrician, nothing hardwired; the whole thing is plug-in and removable. First charge, Nov 2: the car pulled 23.7A at about 242V, 5.8 kW, no FAULT — the dryer circuit's ground is good, whatever the garage's 120V wiring is doing. The car charges at 24A after midnight, on the Kia app's schedule, and one session a week is the whole routine: the EV used about 60 kWh in its first full week, which is roughly one 23%-to-90% charge.
+
+### The wall mount
+
+The hard part of the install wasn't electrical. The splitter lives on the right-hand wall, above the dryer. Getting the cable from there to the car was a household negotiation, not a wiring problem. A permanent swap of parking spots: out. Mounting it by the sink: out. An extension cable: out, and I agreed with that one. What finally worked wasn't on any list — the cable coils on a hook on the right wall, runs low past the other car, and I park the EV a bit further forward. It barely reaches. Barely turned out to be enough.
+
+### The rate plan
+
+The rate question closed itself. Before the car arrived, I ran PG&E's comparison on twelve months of meter data and got a dead tie — E-TOU-C and EV2-A within a dollar of each other, for a house with no EV in it. Now that home charging is live, we're staying on E-TOU-C. The house nets out to about zero against the solar over the year; all the EV adds is its 60 kWh a week at the lower usage rate. Buying cheaper nights isn't worth the risk of pushing the household's total into a higher tier. A month of analysis, and the answer is: do nothing.
+
+### The commute plan
+
+It lasted exactly one trip. The split described above — me in the EV once a week, my wife in the WRX — died the first time we ran it. She can drive a manual, but she doesn't like this clutch: too hard, and she came home reporting she had probably burned it. There was a smell to back her up. End of experiment, by mutual agreement, no appeal.
+
+What replaced it is better arithmetic anyway. I take the EV for the short trips — school pickup, errands — whenever it's home, and we take it on weekend trips. A cold gas engine is at its worst exactly there: the ECU pours extra fuel in to heat up the catalytic converter, and the WRX's 3-mile school round trip shows 14 mpg against its 26 mpg combined average. Those are precisely the miles the EV now eats. The WRX kept the commute — long, warm, up to temperature, the work it's actually good at. Its gas stops have stretched from every two weeks to every three.
+
+The Kia app says the EV did about 190 miles in the last seven days. Annualized, that pace would flirt with the lease's 10,000-mile cap, against a plan of 7,300. One week isn't a trend — a weekend trip inflates it — but it's the number I'll be watching.
+
+### Where the fleet stands now
+
+The driving verdict sharpened, too. I still find the EV boring, and I have a better way to say why it matters. The manual keeps me engaged: eyes far ahead, reading what's coming, working the car. That isn't just fun — it feels safer, because my attention is spoken for. In the EV I have to keep alerting myself not to be distracted; there's a lot of screen in that cabin competing for the eyes that should be on the road. The appliance is good at its job. It just asks less of me, and on the road, asking less is not a favor.
+
+So the bet from three weeks ago stands — the EV3 does the appliance miles so the WRX stays special. It just got there by a different route than the one on the dealer sheet.
